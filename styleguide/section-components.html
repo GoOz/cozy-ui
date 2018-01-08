@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cozy-UI Styleguide</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="app.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">
+          <img class="kss-logo" src="kss-assets/images/logo.svg" width="52" height="52" alt="Cozy Cloud" />
+          <div>Cozy-UI Styleguide</div>
+        </h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">
+        <img class="kss-logo" src="kss-assets/images/logo.svg" width="52" height="52" alt="Cozy Cloud" />
+        <div>Cozy-UI Styleguide</div>
+      </h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-settings.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Settings</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-tools.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Tools</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-generic.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Generic</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-utilities.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Utilities</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="kss-state-active" href="section-components.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Components</span>
+            </a>
+                <ul class="kss-nav__subnav">
+                    <li class="kss-nav__item ">
+                      <a href="section-components.html#kssref-components-buttons">
+                        <span class="kss-nav__ref">5.1</span>
+                        <span class="kss-nav__name">Buttons</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-buttons-icons">
+                        <span class="kss-nav__ref">5.1.1</span>
+                        <span class="kss-nav__name">Buttons with icons</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-buttons-link">
+                        <span class="kss-nav__ref">5.1.2</span>
+                        <span class="kss-nav__name">Buttons link shaped with icons</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-buttons-more">
+                        <span class="kss-nav__ref">5.1.3</span>
+                        <span class="kss-nav__name">Button More</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-buttons-alert">
+                        <span class="kss-nav__ref">5.1.4</span>
+                        <span class="kss-nav__name">Alert&#x27;s buttons</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-buttons-special">
+                        <span class="kss-nav__ref">5.1.5</span>
+                        <span class="kss-nav__name">Special buttons</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-components.html#kssref-components-form">
+                        <span class="kss-nav__ref">5.2</span>
+                        <span class="kss-nav__name">Form</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-form-label">
+                        <span class="kss-nav__ref">5.2.1</span>
+                        <span class="kss-nav__name">Label</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-form-textarea">
+                        <span class="kss-nav__ref">5.2.2</span>
+                        <span class="kss-nav__name">Textarea</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-components.html#kssref-components-nav">
+                        <span class="kss-nav__ref">5.3</span>
+                        <span class="kss-nav__name">Navigation</span>
+                      </a>
+                    </li>
+                </ul>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-1" id="kssref-components">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components">
+                <h1 class="kss-section__item kss-section__item--depth-1">
+                  <span class="kss-section__ref">5</span>
+                  <span class="kss-section__name">Components</span>
+                </h1>
+              </a>
+
+
+            </article>
+
+
+            </header>
+            <section class="kss-section kss-section--depth-2" id="kssref-components-buttons">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-buttons">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.1</span>
+                  <span class="kss-section__name">Buttons</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Buttons in different flavour</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+    <button class="c-btn [modifier class]">Click me, I'm a button!</button>
+    <a hre="#" class="c-btn [modifier class]">Click me, I'm a link!</a>
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.c-btn--regular</h2>
+
+                  <p class="kss-modifiers__description">Regular</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+    <button class="c-btn c-btn--regular">Click me, I'm a button!</button>
+    <a hre="#" class="c-btn c-btn--regular">Click me, I'm a link!</a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--secondary</h2>
+
+                  <p class="kss-modifiers__description">Regular alternative</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+    <button class="c-btn c-btn--secondary">Click me, I'm a button!</button>
+    <a hre="#" class="c-btn c-btn--secondary">Click me, I'm a link!</a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--danger</h2>
+
+                  <p class="kss-modifiers__description">Danger</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+    <button class="c-btn c-btn--danger">Click me, I'm a button!</button>
+    <a hre="#" class="c-btn c-btn--danger">Click me, I'm a link!</a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--danger-outline</h2>
+
+                  <p class="kss-modifiers__description">Danger outlined</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+    <button class="c-btn c-btn--danger-outline">Click me, I'm a button!</button>
+    <a hre="#" class="c-btn c-btn--danger-outline">Click me, I'm a link!</a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--highlight</h2>
+
+                  <p class="kss-modifiers__description">Highlighted button to catch the eye</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+    <button class="c-btn c-btn--highlight">Click me, I'm a button!</button>
+    <a hre="#" class="c-btn c-btn--highlight">Click me, I'm a link!</a>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;u-p-1&quot; style&#x3D;&quot; background-color: darkgrey&quot;&gt;
+    &lt;button class&#x3D;&quot;c-btn [modifier class]&quot;&gt;Click me, I&#x27;m a button!&lt;/button&gt;
+    &lt;a hre&#x3D;&quot;#&quot; class&#x3D;&quot;c-btn [modifier class]&quot;&gt;Click me, I&#x27;m a link!&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-buttons-icons">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-buttons-icons">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.1.1</span>
+                  <span class="kss-section__name">Buttons with icons</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Those buttons can inherit any flavour of buttons described above.</p>
+<p>For this example, we use <code>.c-btn--regular</code> but choose the one you want.</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+    <button class="c-btn c-btn--regular [modifier class]">Click me, I'm a button!</button>
+    <a hre="#" class="c-btn c-btn--regular [modifier class]">Click me, I'm a link!</a>
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.c-btn--share</h2>
+
+                  <p class="kss-modifiers__description">Share</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+    <button class="c-btn c-btn--regular c-btn--share">Click me, I'm a button!</button>
+    <a hre="#" class="c-btn c-btn--regular c-btn--share">Click me, I'm a link!</a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--send</h2>
+
+                  <p class="kss-modifiers__description">Send</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+    <button class="c-btn c-btn--regular c-btn--send">Click me, I'm a button!</button>
+    <a hre="#" class="c-btn c-btn--regular c-btn--send">Click me, I'm a link!</a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--download</h2>
+
+                  <p class="kss-modifiers__description">Download</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+    <button class="c-btn c-btn--regular c-btn--download">Click me, I'm a button!</button>
+    <a hre="#" class="c-btn c-btn--regular c-btn--download">Click me, I'm a link!</a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--upload</h2>
+
+                  <p class="kss-modifiers__description">Upload</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+    <button class="c-btn c-btn--regular c-btn--upload">Click me, I'm a button!</button>
+    <a hre="#" class="c-btn c-btn--regular c-btn--upload">Click me, I'm a link!</a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--delete</h2>
+
+                  <p class="kss-modifiers__description">Delete</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+    <button class="c-btn c-btn--regular c-btn--delete">Click me, I'm a button!</button>
+    <a hre="#" class="c-btn c-btn--regular c-btn--delete">Click me, I'm a link!</a>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;u-p-1&quot; style&#x3D;&quot; background-color: darkgrey&quot;&gt;
+    &lt;button class&#x3D;&quot;c-btn c-btn--regular [modifier class]&quot;&gt;Click me, I&#x27;m a button!&lt;/button&gt;
+    &lt;a hre&#x3D;&quot;#&quot; class&#x3D;&quot;c-btn c-btn--regular [modifier class]&quot;&gt;Click me, I&#x27;m a link!&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-buttons-link">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-buttons-link">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.1.2</span>
+                  <span class="kss-section__name">Buttons link shaped with icons</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Buttons that look like links, with icons</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+    <button class="[modifier class]">Click me, I'm a button!</button>
+    <a hre="#" class="[modifier class]">Click me, I'm a link!</a>
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.c-link--upload</h2>
+
+                  <p class="kss-modifiers__description">Upload</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+    <button class="c-link--upload">Click me, I'm a button!</button>
+    <a hre="#" class="c-link--upload">Click me, I'm a link!</a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-link--delete</h2>
+
+                  <p class="kss-modifiers__description">Delete</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+    <button class="c-link--delete">Click me, I'm a button!</button>
+    <a hre="#" class="c-link--delete">Click me, I'm a link!</a>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;u-p-1&quot; style&#x3D;&quot; background-color: darkgrey&quot;&gt;
+    &lt;button class&#x3D;&quot;[modifier class]&quot;&gt;Click me, I&#x27;m a button!&lt;/button&gt;
+    &lt;a hre&#x3D;&quot;#&quot; class&#x3D;&quot;[modifier class]&quot;&gt;Click me, I&#x27;m a link!&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-buttons-more">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-buttons-more">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.1.3</span>
+                  <span class="kss-section__name">Button More</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Button to display more information</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+   <button class="c-btn [modifier class]"><span class="u-visuallyhidden">Click me, I'm a button!</span></button>
+   <a hre="#" class="c-btn [modifier class]"><span class="u-visuallyhidden">Click me, I'm a link!</span></a>
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.c-btn--more</h2>
+
+                  <p class="kss-modifiers__description">Classic more button</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+   <button class="c-btn c-btn--more"><span class="u-visuallyhidden">Click me, I'm a button!</span></button>
+   <a hre="#" class="c-btn c-btn--more"><span class="u-visuallyhidden">Click me, I'm a link!</span></a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn-extra</h2>
+
+                  <p class="kss-modifiers__description">Extra button, much like More button but lighter, without border</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+   <button class="c-btn c-btn-extra"><span class="u-visuallyhidden">Click me, I'm a button!</span></button>
+   <a hre="#" class="c-btn c-btn-extra"><span class="u-visuallyhidden">Click me, I'm a link!</span></a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn-extra--white</h2>
+
+                  <p class="kss-modifiers__description">Extra button with white icon</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
+   <button class="c-btn c-btn-extra--white"><span class="u-visuallyhidden">Click me, I'm a button!</span></button>
+   <a hre="#" class="c-btn c-btn-extra--white"><span class="u-visuallyhidden">Click me, I'm a link!</span></a>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;u-p-1&quot; style&#x3D;&quot; background-color: darkgrey&quot;&gt;
+   &lt;button class&#x3D;&quot;c-btn [modifier class]&quot;&gt;&lt;span class&#x3D;&quot;u-visuallyhidden&quot;&gt;Click me, I&#x27;m a button!&lt;/span&gt;&lt;/button&gt;
+   &lt;a hre&#x3D;&quot;#&quot; class&#x3D;&quot;c-btn [modifier class]&quot;&gt;&lt;span class&#x3D;&quot;u-visuallyhidden&quot;&gt;Click me, I&#x27;m a link!&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-buttons-alert">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-buttons-alert">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.1.4</span>
+                  <span class="kss-section__name">Alert&#x27;s buttons</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Buttons that look like links, with icons</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn--alert [modifier class] u-m-1">Click me, I'm a button!</button>
+    <a hre="#" class="c-btn--alert [modifier class] u-m-1">Click me, I'm a link!</a>
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.c-btn-alert--error</h2>
+
+                  <p class="kss-modifiers__description">Error button</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn--alert c-btn-alert--error u-m-1">Click me, I'm a button!</button>
+    <a hre="#" class="c-btn--alert c-btn-alert--error u-m-1">Click me, I'm a link!</a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn-alert--info</h2>
+
+                  <p class="kss-modifiers__description">Information button</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn--alert c-btn-alert--info u-m-1">Click me, I'm a button!</button>
+    <a hre="#" class="c-btn--alert c-btn-alert--info u-m-1">Click me, I'm a link!</a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn-alert--success</h2>
+
+                  <p class="kss-modifiers__description">Success button</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn--alert c-btn-alert--success u-m-1">Click me, I'm a button!</button>
+    <a hre="#" class="c-btn--alert c-btn-alert--success u-m-1">Click me, I'm a link!</a>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;u-p-1&quot;&gt;
+    &lt;button class&#x3D;&quot;c-btn--alert [modifier class] u-m-1&quot;&gt;Click me, I&#x27;m a button!&lt;/button&gt;
+    &lt;a hre&#x3D;&quot;#&quot; class&#x3D;&quot;c-btn--alert [modifier class] u-m-1&quot;&gt;Click me, I&#x27;m a link!&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-buttons-special">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-buttons-special">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.1.5</span>
+                  <span class="kss-section__name">Special buttons</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Special link that look like buttons (<a> only)</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="u-p-1" style="background-color: darkgrey; width: 50%;">
+    <a hre="#" class="[modifier class] u-mb-1">Click me, I'm a link!</a>
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.c-btn-client</h2>
+
+                  <p class="kss-modifiers__description">Button to download Cozy client app</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style="background-color: darkgrey; width: 50%;">
+    <a hre="#" class="c-btn-client u-mb-1">Click me, I'm a link!</a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn-client-mobile</h2>
+
+                  <p class="kss-modifiers__description">Button to download Cozy client app on mobile</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style="background-color: darkgrey; width: 50%;">
+    <a hre="#" class="c-btn-client-mobile u-mb-1">Click me, I'm a link!</a>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;u-p-1&quot; style&#x3D;&quot;background-color: darkgrey; width: 50%;&quot;&gt;
+    &lt;a hre&#x3D;&quot;#&quot; class&#x3D;&quot;[modifier class] u-mb-1&quot;&gt;Click me, I&#x27;m a link!&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-components-form">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-form">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.2</span>
+                  <span class="kss-section__name">Form</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Form elements</p>
+</div>
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-form-label">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-form-label">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.2.1</span>
+                  <span class="kss-section__name">Label</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Label element coupled with any other form elements like inputs, textareas, select,etc</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><form>
+   <div>
+       <label class="c-label [modifier class]" for="">Hello, I'm a label</label>
+   </div>
+</form></div>
+
+                  <h2 class="kss-modifiers__name">.is-error</h2>
+
+                  <p class="kss-modifiers__description">Error variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div>
+       <label class="c-label is-error" for="">Hello, I'm a label</label>
+   </div>
+</form></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;form&gt;
+   &lt;div&gt;
+       &lt;label class&#x3D;&quot;c-label [modifier class]&quot; for&#x3D;&quot;&quot;&gt;Hello, I&#x27;m a label&lt;/label&gt;
+   &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-form-textarea">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-form-textarea">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.2.2</span>
+                  <span class="kss-section__name">Textarea</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><form>
+   <div>
+       <textarea class="c-textarea [modifier class]" placeholder="Once upon a time…"></textarea>
+   </div>
+</form></div>
+
+                  <h2 class="kss-modifiers__name">.is-error</h2>
+
+                  <p class="kss-modifiers__description">Error variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div>
+       <textarea class="c-textarea is-error" placeholder="Once upon a time…"></textarea>
+   </div>
+</form></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;form&gt;
+   &lt;div&gt;
+       &lt;textarea class&#x3D;&quot;c-textarea [modifier class]&quot; placeholder&#x3D;&quot;Once upon a time…&quot;&gt;&lt;/textarea&gt;
+   &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-components-nav">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-nav">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.3</span>
+                  <span class="kss-section__name">Navigation</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Navigation component that displays a list of item link to other pages</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><nav style="width: 220px">
+    <ul class="c-nav">
+        <li class="c-nav-item">
+            <a class="c-nav-link is-active" href="#">
+                <span class="c-nav-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+                    </svg>
+                </span>
+                <span class="c-nav-text">Link 1</span>
+            </a>
+        </li>
+        <li class="c-nav-item">
+            <a class="c-nav-link" href="#">
+                <span class="c-nav-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+                    </svg>
+                </span>
+                <span class="c-nav-text">Link 2</span>
+            </a>
+        </li>
+        <li class="c-nav-item">
+            <a class="c-nav-link" href="#">
+                <span class="c-nav-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+                    </svg>
+                </span>
+                <span class="c-nav-text">Link 3</span>
+            </a>
+        </li>
+    </ul>
+</nav></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;nav style&#x3D;&quot;width: 220px&quot;&gt;
+    &lt;ul class&#x3D;&quot;c-nav&quot;&gt;
+        &lt;li class&#x3D;&quot;c-nav-item&quot;&gt;
+            &lt;a class&#x3D;&quot;c-nav-link is-active&quot; href&#x3D;&quot;#&quot;&gt;
+                &lt;span class&#x3D;&quot;c-nav-icon&quot;&gt;
+                    &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;16&quot; height&#x3D;&quot;16&quot; viewBox&#x3D;&quot;0 0 16 16&quot;&gt;
+                        &lt;path d&#x3D;&quot;M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z&quot;/&gt;
+                    &lt;/svg&gt;
+                &lt;/span&gt;
+                &lt;span class&#x3D;&quot;c-nav-text&quot;&gt;Link 1&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class&#x3D;&quot;c-nav-item&quot;&gt;
+            &lt;a class&#x3D;&quot;c-nav-link&quot; href&#x3D;&quot;#&quot;&gt;
+                &lt;span class&#x3D;&quot;c-nav-icon&quot;&gt;
+                    &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;16&quot; height&#x3D;&quot;16&quot; viewBox&#x3D;&quot;0 0 16 16&quot;&gt;
+                        &lt;path d&#x3D;&quot;M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z&quot;/&gt;
+                    &lt;/svg&gt;
+                &lt;/span&gt;
+                &lt;span class&#x3D;&quot;c-nav-text&quot;&gt;Link 2&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class&#x3D;&quot;c-nav-item&quot;&gt;
+            &lt;a class&#x3D;&quot;c-nav-link&quot; href&#x3D;&quot;#&quot;&gt;
+                &lt;span class&#x3D;&quot;c-nav-icon&quot;&gt;
+                    &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;16&quot; height&#x3D;&quot;16&quot; viewBox&#x3D;&quot;0 0 16 16&quot;&gt;
+                        &lt;path d&#x3D;&quot;M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z&quot;/&gt;
+                    &lt;/svg&gt;
+                &lt;/span&gt;
+                &lt;span class&#x3D;&quot;c-nav-text&quot;&gt;Link 3&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                </article>
+
+            </section>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  
+  <!-- /scripts. -->
+
+  </body>
+</html>
