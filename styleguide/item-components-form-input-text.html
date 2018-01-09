@@ -87,18 +87,18 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-3" id="kssref-components-buttons-link">
+            <header class="kss-section kss-section--depth-3" id="kssref-components-form-input-text">
 
             <article class="kss-section__content">
 
-              <a class="kss-section__permalink" href="#kssref-components-buttons-link">
+              <a class="kss-section__permalink" href="#kssref-components-form-input-text">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">5.1.2</span>
-                  <span class="kss-section__name">Buttons link shaped with icons</span>
+                  <span class="kss-section__ref">5.2.2</span>
+                  <span class="kss-section__name">Input text</span>
                 </h3>
               </a>
 
-                <div class="kss-section__description"><p>Buttons that look like links, with icons</p>
+                <div class="kss-section__description"><p>Input element for text but also password, url, email</p>
 </div>
 
             </article>
@@ -108,34 +108,56 @@
 
                   <h2 class="kss-modifiers__name">Default styling</h2>
 
-                <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
-    <button class="[modifier class]">Click me, I'm a button!</button>
-    <a hre="#" class="[modifier class]">Click me, I'm a link!</a>
-</div></div>
+                <div class="kss-modifiers__example"><form>
+   <div class="u-mb-1">
+       <input type="text" class="c-input-text [modifier class]" placeholder="I'm an input[type=text]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="password" class="c-input-text [modifier class]" placeholder="I'm an input[type=password]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="url" class="c-input-text [modifier class]" placeholder="I'm an input[type=url]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="email" class="c-input-text [modifier class]" placeholder="I'm an input[type=email]" value="" />
+   </div>
+</form></div>
 
-                  <h2 class="kss-modifiers__name">.c-link--upload</h2>
+                  <h2 class="kss-modifiers__name">.is-error</h2>
 
-                  <p class="kss-modifiers__description">Upload</p>
+                  <p class="kss-modifiers__description">Error variant</p>
 
-                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
-    <button class="c-link--upload">Click me, I'm a button!</button>
-    <a hre="#" class="c-link--upload">Click me, I'm a link!</a>
-</div></div>
-                  <h2 class="kss-modifiers__name">.c-link--delete</h2>
-
-                  <p class="kss-modifiers__description">Delete</p>
-
-                  <div class="kss-modifiers__example"><div class="u-p-1" style=" background-color: darkgrey">
-    <button class="c-link--delete">Click me, I'm a button!</button>
-    <a hre="#" class="c-link--delete">Click me, I'm a link!</a>
-</div></div>
+                  <div class="kss-modifiers__example"><form>
+   <div class="u-mb-1">
+       <input type="text" class="c-input-text is-error" placeholder="I'm an input[type=text]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="password" class="c-input-text is-error" placeholder="I'm an input[type=password]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="url" class="c-input-text is-error" placeholder="I'm an input[type=url]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="email" class="c-input-text is-error" placeholder="I'm an input[type=email]" value="" />
+   </div>
+</form></div>
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;u-p-1&quot; style&#x3D;&quot; background-color: darkgrey&quot;&gt;
-    &lt;button class&#x3D;&quot;[modifier class]&quot;&gt;Click me, I&#x27;m a button!&lt;/button&gt;
-    &lt;a hre&#x3D;&quot;#&quot; class&#x3D;&quot;[modifier class]&quot;&gt;Click me, I&#x27;m a link!&lt;/a&gt;
-&lt;/div&gt;</code></pre>
+                  <pre><code class="language-markup">&lt;form&gt;
+   &lt;div class&#x3D;&quot;u-mb-1&quot;&gt;
+       &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;c-input-text [modifier class]&quot; placeholder&#x3D;&quot;I&#x27;m an input[type&#x3D;text]&quot; value&#x3D;&quot;&quot; /&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;u-mb-1&quot;&gt;
+       &lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;c-input-text [modifier class]&quot; placeholder&#x3D;&quot;I&#x27;m an input[type&#x3D;password]&quot; value&#x3D;&quot;&quot; /&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;u-mb-1&quot;&gt;
+       &lt;input type&#x3D;&quot;url&quot; class&#x3D;&quot;c-input-text [modifier class]&quot; placeholder&#x3D;&quot;I&#x27;m an input[type&#x3D;url]&quot; value&#x3D;&quot;&quot; /&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;u-mb-1&quot;&gt;
+       &lt;input type&#x3D;&quot;email&quot; class&#x3D;&quot;c-input-text [modifier class]&quot; placeholder&#x3D;&quot;I&#x27;m an input[type&#x3D;email]&quot; value&#x3D;&quot;&quot; /&gt;
+   &lt;/div&gt;
+&lt;/form&gt;</code></pre>
                 </article>
 
             </header>
