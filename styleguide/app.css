@@ -211,6 +211,17 @@ body {
   position: relative;
   top: -0.0625rem;
 }
+.c-btn::before,
+.c-btn--regular::before,
+.c-btn-client::before,
+.c-btn-client-mobile::before,
+.c-btn::after,
+.c-btn--regular::after,
+.c-btn-client::after,
+.c-btn-client-mobile::after {
+  content: '';
+  flex: 1 0 auto;
+}
 .c-btn--secondary,
 .c-btn-client,
 .c-btn-client-mobile {
@@ -578,10 +589,10 @@ body {
   box-sizing: border-box;
   display: flex;
   max-width: 100%;
+  width: 100%;
   height: 100%;
 }
-.o-layout--2panes main,
-.o-layout--2panes > aside {
+.o-layout--2panes main {
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
@@ -601,6 +612,11 @@ body {
   flex: 0 0 100%;
   height: auto;
   align-items: stretch;
+}
+.o-layout--2panes > aside {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
 }
 .o-layout--2panes main,
 .o-layout--2panes main > [role=contentinfo] {
@@ -692,8 +708,14 @@ body {
 }
 .c-nav-icon {
   display: inline-block;
-  margin-right: 1rem;
+  margin-right: 0.6875rem;
   color: #95999d;
+}
+.is-active .c-nav-icon {
+  color: #297ef2;
+}
+:hover > .c-nav-icon {
+  color: #32363f;
 }
 @media (max-width: 63.9375rem) {
   .c-nav-icon {
@@ -701,6 +723,10 @@ body {
     font-size: 1.5rem;
     margin-right: 0;
     text-align: center;
+  }
+  .c-nav-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 @media (max-width: 63.9375rem) {
@@ -742,7 +768,7 @@ body {
   .c-nav-link {
     display: block;
     height: auto;
-    padding: 1.8125rem 0 0;
+    padding: 0;
     text-align: center;
     color: #5d6165;
     font-size: 0.625rem;
@@ -822,12 +848,12 @@ body {
 .c-table-cell,
 .c-table-header {
   box-sizing: border-box;
-  padding: 0.875rem 2rem;
+  padding: 0.875rem 1rem;
   font-size: 0.875rem;
   line-height: 1.3;
 }
 .c-table-header {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -844,6 +870,25 @@ body {
   .c-table-cell--primary {
     flex: 1 1 auto;
   }
+}
+.c-table-divider {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  text-indent: 2rem;
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 1.33;
+  color: #95999d;
+}
+.c-table-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41,126,242,0.05);
 }
 .u-visuallyhidden {
   position: absolute !important;
@@ -865,6 +910,8 @@ body {
   .u-hide--mob {
     display: none !important;
   }
+}
+@media (min-width: 64rem) {
 }
 @media (min-width: 48.0625rem) {
   .u-hide--desk {
@@ -1300,6 +1347,14 @@ body {
                 <td class="c-table-cell" style="width:25%">corporis</td>
                 <td class="c-table-cell" style="width:25%">placeat</td>
             </tr>
+            <tr class="c-table-divider">
+                <td colspan="3">Divider</td>
+            </tr>
+            <tr class="c-table-row">
+                <td class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</td>
+                <td class="c-table-cell" style="width:25%">corporis</td>
+                <td class="c-table-cell" style="width:25%">placeat</td>
+            </tr>
         </tbody>
     </table>
     <h2>Table with div element</h2>
@@ -1317,6 +1372,12 @@ body {
                 <div class="c-table-cell" style="width:25%">lorem</div>
                 <div class="c-table-cell" style="width:25%">ipsum</div>
             </div>
+            <div class="c-table-row">
+                <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
+                <div class="c-table-cell" style="width:25%">corporis</div>
+                <div class="c-table-cell" style="width:25%">placeat</div>
+            </div>
+            <div class="c-table-divider">Divider</div>
             <div class="c-table-row">
                 <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
                 <div class="c-table-cell" style="width:25%">corporis</div>
