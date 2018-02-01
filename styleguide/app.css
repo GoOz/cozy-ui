@@ -890,6 +890,11 @@ body {
   height: 100%;
   background-color: rgba(41,126,242,0.05);
 }
+@media (max-width: 48rem) {
+  .c-table-divider {
+    text-indent: 1rem;
+  }
+}
 .u-visuallyhidden {
   position: absolute !important;
   border: 0 !important;
