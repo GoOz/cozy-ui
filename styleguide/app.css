@@ -44,11 +44,13 @@ textarea {
     transform: rotate(359deg);
   }
 }
-.c-btn[aria-busy=true]::after,
-.c-btn--regular[aria-busy=true]::after,
+.c-btn[aria-busy=true] span::after,
+.c-btn--regular[aria-busy=true] span::after,
 .c-btn--secondary[aria-busy=true]::after,
 .c-btn--danger-outline[aria-busy=true]::after,
+.c-btn-client[aria-busy=true] span::after,
 .c-btn-client[aria-busy=true]::after,
+.c-btn-client-mobile[aria-busy=true] span::after,
 .c-btn-client-mobile[aria-busy=true]::after {
   content: '';
   display: inline-block;
@@ -58,25 +60,27 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.c-btn[aria-busy=true]::after,
-.c-btn--regular[aria-busy=true]::after,
-.c-btn-client[aria-busy=true]::after,
-.c-btn-client-mobile[aria-busy=true]::after {
+.c-btn[aria-busy=true] span::after,
+.c-btn--regular[aria-busy=true] span::after,
+.c-btn-client[aria-busy=true] span::after,
+.c-btn-client-mobile[aria-busy=true] span::after {
   width: 1rem;
   height: 1rem;
 }
-.c-btn[aria-busy=true]::after,
-.c-btn--regular[aria-busy=true]::after,
+.c-btn[aria-busy=true] span::after,
+.c-btn--regular[aria-busy=true] span::after,
 .c-btn--secondary[aria-busy=true]::after,
 .c-btn--danger-outline[aria-busy=true]::after,
+.c-btn-client[aria-busy=true] span::after,
 .c-btn-client[aria-busy=true]::after,
+.c-btn-client-mobile[aria-busy=true] span::after,
 .c-btn-client-mobile[aria-busy=true]::after {
   animation: spin 1s linear infinite;
 }
-.c-btn[aria-busy=true]::after,
-.c-btn--regular[aria-busy=true]::after,
-.c-btn-client[aria-busy=true]::after,
-.c-btn-client-mobile[aria-busy=true]::after {
+.c-btn[aria-busy=true] span::after,
+.c-btn--regular[aria-busy=true] span::after,
+.c-btn-client[aria-busy=true] span::after,
+.c-btn-client-mobile[aria-busy=true] span::after {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMiAzMicgd2lkdGg9JzEyJyBoZWlnaHQ9JzEyJyBmaWxsPSd3aGl0ZSc+PHBhdGggb3BhY2l0eT0nLjI1JyBkPSdNMTYgMGExNiAxNiAwIDAgMCAwIDMyIDE2IDE2IDAgMCAwIDAtMzJtMCA0YTEyIDEyIDAgMCAxIDAgMjQgMTIgMTIgMCAwIDEgMC0yNCcvPjxwYXRoIGQ9J00xNiAwYTE2IDE2IDAgMCAxIDE2IDE2aC00YTEyIDEyIDAgMCAwLTEyLTEyeicvPjwvc3ZnPgo=");
 }
 .c-btn--secondary[aria-busy=true]::after,
@@ -132,14 +136,13 @@ body {
 .c-btn-client,
 .c-btn-client-mobile {
   box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   margin: 0 0.25em;
   border: 1px solid #297ef2;
   border-radius: 2px;
   min-height: 2.5rem;
-  padding: 0.5rem 0.9375rem;
+  min-width: 7rem;
+  padding: 0.8125rem 1rem;
   background: #297ef2;
   vertical-align: top;
   text-align: center;
@@ -162,6 +165,15 @@ body {
 .c-btn-client input,
 .c-btn-client-mobile input {
   cursor: pointer;
+}
+.c-btn > span,
+.c-btn--regular > span,
+.c-btn-client > span,
+.c-btn-client-mobile > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 .c-btn:visited,
 .c-btn--regular:visited,
@@ -204,23 +216,12 @@ body {
 .c-btn-client-mobile:focus {
   background-color: #0b61d6;
 }
-.c-btn[aria-busy=true]::after,
-.c-btn--regular[aria-busy=true]::after,
-.c-btn-client[aria-busy=true]::after,
-.c-btn-client-mobile[aria-busy=true]::after {
+.c-btn[aria-busy=true] span::after,
+.c-btn--regular[aria-busy=true] span::after,
+.c-btn-client[aria-busy=true] span::after,
+.c-btn-client-mobile[aria-busy=true] span::after {
   position: relative;
   top: -0.0625rem;
-}
-.c-btn::before,
-.c-btn--regular::before,
-.c-btn-client::before,
-.c-btn-client-mobile::before,
-.c-btn::after,
-.c-btn--regular::after,
-.c-btn-client::after,
-.c-btn-client-mobile::after {
-  content: '';
-  flex: 1 0 auto;
 }
 .c-btn--secondary,
 .c-btn-client,
@@ -1132,7 +1133,7 @@ body {
 
  Markup:
  <div class="u-p-1">
-     <button class="c-btn {{modifier_class}}">Click me, I'm a button!</button>
+     <button class="c-btn {{modifier_class}}"><span>Click me, I'm a button!</span></button>
  </div>
 
  .c-btn--secondary - Basic alternative
@@ -1154,10 +1155,12 @@ body {
  Markup:
  <div class="u-p-1">
     <button class="c-btn {{modifier_class}}">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-            <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
-        </svg>
-        Click me, I'm a button!
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+            </svg>
+            Click me, I'm a button!
+        </span>
     </button>
  </div>
 
@@ -1177,8 +1180,8 @@ body {
 
  Markup:
  <div class="u-p-1">
-     <button class="c-btn--alert {{modifier_class}} u-m-1">Click me, I'm a button!</button>
-     <a hre="#" class="c-btn--alert {{modifier_class}} u-m-1">Click me, I'm a link!</a>
+     <button class="c-btn--alert {{modifier_class}} u-m-1"><span>Click me, I'm a button!</span></button>
+     <a hre="#" class="c-btn--alert {{modifier_class}} u-m-1"><span>Click me, I'm a link!</span></a>
  </div>
 
  .c-btn-alert--error - Error button
@@ -1198,7 +1201,7 @@ body {
 
  Markup:
  <div class="u-p-1" style="background-color: darkgrey; width: 50%;">
-     <a hre="#" class="{{modifier_class}} u-mb-1">Click me, I'm a link!</a>
+     <a hre="#" class="{{modifier_class}} u-mb-1"><span>Click me, I'm a link!</span></a>
  </div>
 
  .c-btn-client - Button to download Cozy client app
