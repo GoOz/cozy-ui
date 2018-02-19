@@ -87,41 +87,69 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-3" id="kssref-settings-colors-green">
+            <header class="kss-section kss-section--depth-2" id="kssref-components-alerts">
 
             <article class="kss-section__content">
 
-              <a class="kss-section__permalink" href="#kssref-settings-colors-green">
-                <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">1.2.3</span>
-                  <span class="kss-section__name">Green</span>
-                </h3>
+              <a class="kss-section__permalink" href="#kssref-components-alerts">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.2</span>
+                  <span class="kss-section__name">Alerts</span>
+                </h2>
               </a>
 
+                <div class="kss-section__description"><p>Display an alert at the top of the app on desktop and docked at the bottom on mobile. (I&#39;m overwriting the fixed position for the sake of this example only)</p>
+</div>
 
-                <div class="kss-parameters__title">Parameters:</div>
-                <ul class="kss-parameters">
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>emerald</code></div>
-                    <div class="kss-parameters__description">
-                      #35CE68
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>malachite</code></div>
-                    <div class="kss-parameters__description">
-                      #08b442
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>weirdGreen</code></div>
-                    <div class="kss-parameters__description">
-                      #40DE8E
-                    </div>
-                  </li>
-                </ul>
             </article>
 
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="c-alert" style="position: static;">
+   <div class="c-alert-wrapper [modifier class]">
+       This is an alert
+   </div>
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.c-alert--error</h2>
+
+                  <p class="kss-modifiers__description">displays a warning/error alert</p>
+
+                  <div class="kss-modifiers__example"><div class="c-alert" style="position: static;">
+   <div class="c-alert-wrapper c-alert--error">
+       This is an alert
+   </div>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-alert--success</h2>
+
+                  <p class="kss-modifiers__description">displays a success alert (by default)</p>
+
+                  <div class="kss-modifiers__example"><div class="c-alert" style="position: static;">
+   <div class="c-alert-wrapper c-alert--success">
+       This is an alert
+   </div>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-alert--info</h2>
+
+                  <p class="kss-modifiers__description">displays a neutral info alert</p>
+
+                  <div class="kss-modifiers__example"><div class="c-alert" style="position: static;">
+   <div class="c-alert-wrapper c-alert--info">
+       This is an alert
+   </div>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;c-alert&quot; style&#x3D;&quot;position: static;&quot;&gt;
+   &lt;div class&#x3D;&quot;c-alert-wrapper [modifier class]&quot;&gt;
+       This is an alert
+   &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </article>
 
             </header>
     </section>
