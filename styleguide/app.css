@@ -360,7 +360,7 @@ body {
   padding: 0.5rem 1rem;
   background-color: transparent;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1rem;
 }
 .c-btn-alert--error {
   color: #f52d2d;
@@ -511,9 +511,9 @@ body {
 [data-input=checkbox] label {
   position: relative;
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  padding-left: 22.4px;
+  width: 1rem;
+  height: 1rem;
+  padding-left: 1.4rem;
   cursor: pointer;
 }
 [data-input=radio] label::before,
@@ -526,8 +526,8 @@ body {
   top: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
 }
 [data-input=radio] label::before,
 [data-input=checkbox] label::before {
@@ -620,6 +620,84 @@ body {
   border-radius: 0.125rem;
   padding: 0.485rem 1rem 0.64rem;
 }
+.c-input-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.c-input-checkbox span {
+  position: relative;
+  display: inline-block;
+  height: 1rem;
+  padding-left: 1.4rem;
+  line-height: 1rem;
+  cursor: pointer;
+}
+.c-input-checkbox span::before,
+.c-input-checkbox span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.125rem;
+}
+.c-input-checkbox span::before {
+  -webkit-transition: -webkit-box-shadow 350ms cubic-bezier(0, 0.89, 0.44, 1);
+  transition: -webkit-box-shadow 350ms cubic-bezier(0, 0.89, 0.44, 1);
+  transition: box-shadow 350ms cubic-bezier(0, 0.89, 0.44, 1);
+  transition: box-shadow 350ms cubic-bezier(0, 0.89, 0.44, 1), -webkit-box-shadow 350ms cubic-bezier(0, 0.89, 0.44, 1);
+  -webkit-box-shadow: inset 0 0 0 0.125rem rgba(50,54,63,0.25);
+          box-shadow: inset 0 0 0 0.125rem rgba(50,54,63,0.25);
+  background-color: #fff;
+}
+.c-input-checkbox span::before:hover {
+  -webkit-box-shadow: inset 0 0 0 0.125rem #297ef2;
+          box-shadow: inset 0 0 0 0.125rem #297ef2;
+}
+.c-input-checkbox span::after {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAnIGhlaWdodD0nMjAnIHZpZXdCb3g9JzAgMCAyMCAyMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz4KICAgIDxwYXRoIGQ9J00zIDEwLjAxOWw0LjUyMyA0LjUyMyA5LjU0MS05LjU0MScgc3Ryb2tlPScjZmZmJyBzdHJva2Utd2lkdGg9JzInIGZpbGw9J25vbmUnLz4KPC9zdmc+Cg==");
+  background-size: contain;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+}
+.c-input-checkbox[aria-checked='mixed'] span::after {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj48cGF0aCBkPSJNMy40OTcgMTBoMTMuMDA2IiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==");
+  background-size: contain;
+}
+.c-input-checkbox input[type=checkbox] {
+  display: none;
+  visibility: hidden;
+}
+.c-input-checkbox input[type=checkbox]:checked + span::before {
+  -webkit-box-shadow: inset 0 0 0 1rem #297ef2;
+          box-shadow: inset 0 0 0 1rem #297ef2;
+}
+.c-input-checkbox input[type=checkbox]:checked + span::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.c-input-checkbox input[type=checkbox]:not(:checked) + span::after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.c-input-checkbox.is-error input[type=checkbox]:not(:checked) + span {
+  color: #f52d2d;
+}
+.c-input-checkbox.is-error input[type=checkbox]:not(:checked) + span::before {
+  -webkit-box-shadow: inset 0 0 0 0.125rem #f52d2d;
+          box-shadow: inset 0 0 0 0.125rem #f52d2d;
+  background-color: rgba(245,45,45,0.25);
+}
 .c-textarea {
   display: block;
   width: 100%;
@@ -655,12 +733,12 @@ body {
 [data-input=radio] label::before {
   border-radius: 50%;
   border: 2px solid #95999d;
-  -webkit-box-shadow: inset 0 0 0 16px transparent;
-          box-shadow: inset 0 0 0 16px transparent;
+  -webkit-box-shadow: inset 0 0 0 1rem transparent;
+          box-shadow: inset 0 0 0 1rem transparent;
 }
 [data-input=radio] input[type=radio]:checked + label::before {
-  -webkit-box-shadow: inset 0 0 0 3px #f5f6f7, inset 0 0 0 16px #297ef2;
-          box-shadow: inset 0 0 0 3px #f5f6f7, inset 0 0 0 16px #297ef2;
+  -webkit-box-shadow: inset 0 0 0 3px #f5f6f7, inset 0 0 0 1rem #297ef2;
+          box-shadow: inset 0 0 0 3px #f5f6f7, inset 0 0 0 1rem #297ef2;
 }
 [data-input=checkbox] label::before,
 [data-input=checkbox] label::after {
@@ -684,8 +762,8 @@ body {
   background-size: contain;
 }
 [data-input=checkbox] input[type=checkbox]:checked + label::before {
-  -webkit-box-shadow: inset 0 0 0 16px #297ef2;
-          box-shadow: inset 0 0 0 16px #297ef2;
+  -webkit-box-shadow: inset 0 0 0 1rem #297ef2;
+          box-shadow: inset 0 0 0 1rem #297ef2;
 }
 [data-input=checkbox] input[type=checkbox]:checked + label::after {
   opacity: 1;
@@ -1169,6 +1247,21 @@ body {
     display: none !important;
   }
 }
+.u-p-0 {
+  padding: 0;
+}
+.u-pt-0 {
+  padding-top: 0;
+}
+.u-pb-0 {
+  padding-bottom: 0;
+}
+.u-pl-0 {
+  padding-left: 0;
+}
+.u-pr-0 {
+  padding-right: 0;
+}
 .u-p-1 {
   padding: 1rem;
 }
@@ -1258,6 +1351,21 @@ body {
 }
 .u-pr-2-half {
   padding-right: 2.5rem;
+}
+.u-m-0 {
+  margin: 0;
+}
+.u-mt-0 {
+  margin-top: 0;
+}
+.u-mb-0 {
+  margin-bottom: 0;
+}
+.u-ml-0 {
+  margin-left: 0;
+}
+.u-mr-0 {
+  margin-right: 0;
 }
 .u-m-1 {
   margin: 1rem;
@@ -1663,6 +1771,33 @@ body {
  Styleguide Components.form.input-text
 */
 /*
+ Input Checkbox
+
+ Markup:
+ <form>
+    <h3>Standard checkbox</h3>
+    <div>
+        <label class="c-input-checkbox {{modifier_class}}">
+            <input type="checkbox" />
+            <span>I'm a checkbox</span>
+        </label>
+    </div>
+    <h3>Mixed checkbox</h3>
+    <div>
+        <label class="c-input-checkbox {{modifier_class}}" aria-checked="mixed">
+            <input type="checkbox" />
+            <span>I'm a checkbox</span>
+        </label>
+    </div>
+ </form>
+
+ .is-error - Error variant
+
+ Weight: 3
+
+ Styleguide Components.form.input-checkbox
+*/
+/*
  Textarea
 
  Markup:
@@ -1676,7 +1811,7 @@ body {
  .c-textarea--tiny - Tiny size variant
  .c-textarea--medium - Medium size variant
 
- Weight: 3
+ Weight: 4
 
  Styleguide Components.form.textarea
 */
@@ -1698,7 +1833,7 @@ body {
 
  .is-error - Error variant
 
- Weight: 4
+ Weight: 5
 
  Styleguide Components.form.select
 */
@@ -1916,30 +2051,35 @@ Display an avatar of a user or contact with initials or an image
     Classes to add margins on top, bottom, right, left or all of them based on
     default font-size (16px)
 
+    .u-m-0 - No margins on all sides
     .u-m-half - Margins on all sides with half a line (8px)
     .u-m-1 - Margins on all sides with 1 line (16px)
     .u-m-1-half - Margins on all sides with 1 line an a half (24px)
     .u-m-2 - Margins on all sides with 2 lines (32px)
     .u-m-2-half - Margins on all sides with 1 line an a half (40px)
     .u-m-3 - Margins on all sides with 2 lines (48px)
+    .u-mt-0 - No margin Top
     .u-mt-half - Margin Top with half a line (8px)
     .u-mt-1 - Margin Top with 1 line (16px)
     .u-mt-1-half - Margin Top with 1 line an a half (24px)
     .u-mt-2 - Margin Top with 2 lines (32px)
     .u-mt-2-half - Margin Top with 1 line an a half (40px)
     .u-mt-3 - Margin Top with 2 lines (48px)
+    .u-mb-0 - No margin Bottom
     .u-mb-half - Margin Bottom with half a line (8px)
     .u-mb-1 - Margin Bottom with 1 line (16px)
     .u-mb-1-half - Margin Bottom with 1 line an a half (24px)
     .u-mb-2 - Margin Bottom with 2 lines (32px)
     .u-mb-2-half - Margin Bottom with 1 line an a half (40px)
     .u-mb-3 - Margin Bottom with 2 lines (48px)
+    .u-ml-0 - No margin Left
     .u-ml-half - Margin Left with half a line (8px)
     .u-ml-1 - Margin Left with 1 line (16px)
     .u-ml-1-half - Margin Left with 1 line an a half (24px)
     .u-ml-2 - Margin Left with 2 lines (32px)
     .u-ml-2-half - Margin Left with 1 line an a half (40px)
     .u-ml-3 - Margin Left with 2 lines (48px)
+    .u-mr-0 - No margin Right
     .u-mr-half - Margin Right with half a line (8px)
     .u-mr-1 - Margin Right with 1 line (16px)
     .u-mr-1-half - Margin Right with 1 line an a half (24px)
@@ -1958,30 +2098,35 @@ Display an avatar of a user or contact with initials or an image
     Classes to add paddings on top, bottom, right, left or all of them based on
     default font-size (16px)
 
+    .u-p-0 - No paddings on all sides
     .u-p-half - Paddings on all sides with half a line (8px)
     .u-p-1 - Paddings on all sides with 1 line (16px)
     .u-p-1-half - Paddings on all sides with 1 line an a half (24px)
     .u-p-2 - Paddings on all sides with 2 lines (32px)
     .u-p-2-half - Paddings on all sides with 1 line an a half (40px)
     .u-p-3 - Paddings on all sides with 2 lines (48px)
+    .u-pt-0 - No padding Top
     .u-pt-half - Padding Top with half a line (8px)
     .u-pt-1 - Padding Top with 1 line (16px)
     .u-pt-1-half - Padding Top with 1 line an a half (24px)
     .u-pt-2 - Padding Top with 2 lines (32px)
     .u-pt-2-half - Padding Top with 1 line an a half (40px)
     .u-pt-3 - Padding Top with 2 lines (48px)
+    .u-pb-0 - No padding Bottom
     .u-pb-half - Padding Bottom with half a line (8px)
     .u-pb-1 - Padding Bottom with 1 line (16px)
     .u-pb-1-half - Padding Bottom with 1 line an a half (24px)
     .u-pb-2 - Padding Bottom with 2 lines (32px)
     .u-pb-2-half - Padding Bottom with 1 line an a half (40px)
     .u-pb-3 - Padding Bottom with 2 lines (48px)
+    .u-pl-0 - No padding Left
     .u-pl-half - Padding Left with half a line (8px)
     .u-pl-1 - Padding Left with 1 line (16px)
     .u-pl-1-half - Padding Left with 1 line an a half (24px)
     .u-pl-2 - Padding Left with 2 lines (32px)
     .u-pl-2-half - Padding Left with 1 line an a half (40px)
     .u-pl-3 - Padding Left with 2 lines (48px)
+    .u-pr-0 - No padding Right
     .u-pr-half - Padding Right with half a line (8px)
     .u-pr-1 - Padding Right with 1 line (16px)
     .u-pr-1-half - Padding Right with 1 line an a half (24px)

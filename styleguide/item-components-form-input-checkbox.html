@@ -87,14 +87,14 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-3" id="kssref-components-form-select">
+            <header class="kss-section kss-section--depth-3" id="kssref-components-form-input-checkbox">
 
             <article class="kss-section__content">
 
-              <a class="kss-section__permalink" href="#kssref-components-form-select">
+              <a class="kss-section__permalink" href="#kssref-components-form-input-checkbox">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">5.3.5</span>
-                  <span class="kss-section__name">Select</span>
+                  <span class="kss-section__ref">5.3.3</span>
+                  <span class="kss-section__name">Input Checkbox</span>
                 </h3>
               </a>
 
@@ -107,14 +107,19 @@
                   <h2 class="kss-modifiers__name">Default styling</h2>
 
                 <div class="kss-modifiers__example"><form>
+   <h3>Standard checkbox</h3>
    <div>
-       <select class="c-select [modifier class]">
-           <option value="" disabled selected>Choose your option</option>
-           <option value="1">Option 1</option>
-           <option value="2">Option 2</option>
-           <option value="3">Option 3</option>
-           <option value="4">Option 4</option>
-       </select>
+       <label class="c-input-checkbox [modifier class]">
+           <input type="checkbox" />
+           <span>I'm a checkbox</span>
+       </label>
+   </div>
+   <h3>Mixed checkbox</h3>
+   <div>
+       <label class="c-input-checkbox [modifier class]" aria-checked="mixed">
+           <input type="checkbox" />
+           <span>I'm a checkbox</span>
+       </label>
    </div>
 </form></div>
 
@@ -123,28 +128,38 @@
                   <p class="kss-modifiers__description">Error variant</p>
 
                   <div class="kss-modifiers__example"><form>
+   <h3>Standard checkbox</h3>
    <div>
-       <select class="c-select is-error">
-           <option value="" disabled selected>Choose your option</option>
-           <option value="1">Option 1</option>
-           <option value="2">Option 2</option>
-           <option value="3">Option 3</option>
-           <option value="4">Option 4</option>
-       </select>
+       <label class="c-input-checkbox is-error">
+           <input type="checkbox" />
+           <span>I'm a checkbox</span>
+       </label>
+   </div>
+   <h3>Mixed checkbox</h3>
+   <div>
+       <label class="c-input-checkbox is-error" aria-checked="mixed">
+           <input type="checkbox" />
+           <span>I'm a checkbox</span>
+       </label>
    </div>
 </form></div>
               </article>
 
                 <article class="kss-section__markup">
                   <pre><code class="language-markup">&lt;form&gt;
+   &lt;h3&gt;Standard checkbox&lt;/h3&gt;
    &lt;div&gt;
-       &lt;select class&#x3D;&quot;c-select [modifier class]&quot;&gt;
-           &lt;option value&#x3D;&quot;&quot; disabled selected&gt;Choose your option&lt;/option&gt;
-           &lt;option value&#x3D;&quot;1&quot;&gt;Option 1&lt;/option&gt;
-           &lt;option value&#x3D;&quot;2&quot;&gt;Option 2&lt;/option&gt;
-           &lt;option value&#x3D;&quot;3&quot;&gt;Option 3&lt;/option&gt;
-           &lt;option value&#x3D;&quot;4&quot;&gt;Option 4&lt;/option&gt;
-       &lt;/select&gt;
+       &lt;label class&#x3D;&quot;c-input-checkbox [modifier class]&quot;&gt;
+           &lt;input type&#x3D;&quot;checkbox&quot; /&gt;
+           &lt;span&gt;I&#x27;m a checkbox&lt;/span&gt;
+       &lt;/label&gt;
+   &lt;/div&gt;
+   &lt;h3&gt;Mixed checkbox&lt;/h3&gt;
+   &lt;div&gt;
+       &lt;label class&#x3D;&quot;c-input-checkbox [modifier class]&quot; aria-checked&#x3D;&quot;mixed&quot;&gt;
+           &lt;input type&#x3D;&quot;checkbox&quot; /&gt;
+           &lt;span&gt;I&#x27;m a checkbox&lt;/span&gt;
+       &lt;/label&gt;
    &lt;/div&gt;
 &lt;/form&gt;</code></pre>
                 </article>

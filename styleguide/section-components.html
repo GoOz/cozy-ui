@@ -135,14 +135,20 @@
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
-                      <a href="section-components.html#kssref-components-form-textarea">
+                      <a href="section-components.html#kssref-components-form-input-checkbox">
                         <span class="kss-nav__ref">5.3.3</span>
+                        <span class="kss-nav__name">Input Checkbox</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-form-textarea">
+                        <span class="kss-nav__ref">5.3.4</span>
                         <span class="kss-nav__name">Textarea</span>
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
                       <a href="section-components.html#kssref-components-form-select">
-                        <span class="kss-nav__ref">5.3.4</span>
+                        <span class="kss-nav__ref">5.3.5</span>
                         <span class="kss-nav__name">Select</span>
                       </a>
                     </li>
@@ -793,13 +799,91 @@
                 </article>
 
             </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-form-input-checkbox">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-form-input-checkbox">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.3.3</span>
+                  <span class="kss-section__name">Input Checkbox</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><form>
+   <h3>Standard checkbox</h3>
+   <div>
+       <label class="c-input-checkbox [modifier class]">
+           <input type="checkbox" />
+           <span>I'm a checkbox</span>
+       </label>
+   </div>
+   <h3>Mixed checkbox</h3>
+   <div>
+       <label class="c-input-checkbox [modifier class]" aria-checked="mixed">
+           <input type="checkbox" />
+           <span>I'm a checkbox</span>
+       </label>
+   </div>
+</form></div>
+
+                  <h2 class="kss-modifiers__name">.is-error</h2>
+
+                  <p class="kss-modifiers__description">Error variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <h3>Standard checkbox</h3>
+   <div>
+       <label class="c-input-checkbox is-error">
+           <input type="checkbox" />
+           <span>I'm a checkbox</span>
+       </label>
+   </div>
+   <h3>Mixed checkbox</h3>
+   <div>
+       <label class="c-input-checkbox is-error" aria-checked="mixed">
+           <input type="checkbox" />
+           <span>I'm a checkbox</span>
+       </label>
+   </div>
+</form></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;form&gt;
+   &lt;h3&gt;Standard checkbox&lt;/h3&gt;
+   &lt;div&gt;
+       &lt;label class&#x3D;&quot;c-input-checkbox [modifier class]&quot;&gt;
+           &lt;input type&#x3D;&quot;checkbox&quot; /&gt;
+           &lt;span&gt;I&#x27;m a checkbox&lt;/span&gt;
+       &lt;/label&gt;
+   &lt;/div&gt;
+   &lt;h3&gt;Mixed checkbox&lt;/h3&gt;
+   &lt;div&gt;
+       &lt;label class&#x3D;&quot;c-input-checkbox [modifier class]&quot; aria-checked&#x3D;&quot;mixed&quot;&gt;
+           &lt;input type&#x3D;&quot;checkbox&quot; /&gt;
+           &lt;span&gt;I&#x27;m a checkbox&lt;/span&gt;
+       &lt;/label&gt;
+   &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                </article>
+
+            </section>
             <section class="kss-section kss-section--depth-3" id="kssref-components-form-textarea">
 
             <article class="kss-section__content">
 
               <a class="kss-section__permalink" href="#kssref-components-form-textarea">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">5.3.3</span>
+                  <span class="kss-section__ref">5.3.4</span>
                   <span class="kss-section__name">Textarea</span>
                 </h3>
               </a>
@@ -862,7 +946,7 @@
 
               <a class="kss-section__permalink" href="#kssref-components-form-select">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">5.3.4</span>
+                  <span class="kss-section__ref">5.3.5</span>
                   <span class="kss-section__name">Select</span>
                 </h3>
               </a>
