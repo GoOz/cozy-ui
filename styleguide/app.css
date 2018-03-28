@@ -354,13 +354,12 @@ body {
 .c-btn-alert--error,
 .c-btn-alert--info,
 .c-btn-alert--success {
-  margin: 0.5rem 0 0;
   border: 0;
   height: auto;
   padding: 0.5rem 1rem;
   background-color: transparent;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .c-btn-alert--error {
   color: #f52d2d;
@@ -382,8 +381,10 @@ body {
 }
 .c-btn-alert--info:active,
 .c-btn-alert--info:hover,
+.c-btn-alert--info:not([disabled]):not([aria-disabled=true]):hover,
 .c-btn-alert--info:focus {
   color: #e6e6e6;
+  background-color: #858a8e;
 }
 .c-btn-alert--success {
   color: #35ce68;
@@ -620,12 +621,14 @@ body {
   border-radius: 0.125rem;
   padding: 0.485rem 1rem 0.64rem;
 }
-.c-input-checkbox {
+.c-input-checkbox,
+.c-input-radio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.c-input-checkbox span {
+.c-input-checkbox span,
+.c-input-radio span {
   position: relative;
   display: inline-block;
   height: 1rem;
@@ -634,7 +637,9 @@ body {
   cursor: pointer;
 }
 .c-input-checkbox span::before,
-.c-input-checkbox span::after {
+.c-input-radio span::before,
+.c-input-checkbox span::after,
+.c-input-radio span::after {
   content: '';
   position: absolute;
   left: 0;
@@ -645,7 +650,8 @@ body {
   height: 1rem;
   border-radius: 0.125rem;
 }
-.c-input-checkbox span::before {
+.c-input-checkbox span::before,
+.c-input-radio span::before {
   -webkit-transition: -webkit-box-shadow 350ms cubic-bezier(0, 0.89, 0.44, 1);
   transition: -webkit-box-shadow 350ms cubic-bezier(0, 0.89, 0.44, 1);
   transition: box-shadow 350ms cubic-bezier(0, 0.89, 0.44, 1);
@@ -654,11 +660,13 @@ body {
           box-shadow: inset 0 0 0 0.125rem rgba(50,54,63,0.25);
   background-color: #fff;
 }
-.c-input-checkbox span::before:hover {
+.c-input-checkbox span:hover::before,
+.c-input-radio span:hover::before {
   -webkit-box-shadow: inset 0 0 0 0.125rem #297ef2;
           box-shadow: inset 0 0 0 0.125rem #297ef2;
 }
-.c-input-checkbox span::after {
+.c-input-checkbox span::after,
+.c-input-radio span::after {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAnIGhlaWdodD0nMjAnIHZpZXdCb3g9JzAgMCAyMCAyMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz4KICAgIDxwYXRoIGQ9J00zIDEwLjAxOWw0LjUyMyA0LjUyMyA5LjU0MS05LjU0MScgc3Ryb2tlPScjZmZmJyBzdHJva2Utd2lkdGg9JzInIGZpbGw9J25vbmUnLz4KPC9zdmc+Cg==");
   background-size: contain;
   -webkit-transition-duration: 0.2s;
@@ -668,35 +676,59 @@ body {
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
 }
-.c-input-checkbox[aria-checked='mixed'] span::after {
+.c-input-checkbox[aria-checked='mixed'] span::after,
+.c-input-radio[aria-checked='mixed'] span::after {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj48cGF0aCBkPSJNMy40OTcgMTBoMTMuMDA2IiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==");
   background-size: contain;
 }
-.c-input-checkbox input[type=checkbox] {
+.c-input-checkbox input,
+.c-input-radio input {
   display: none;
   visibility: hidden;
 }
-.c-input-checkbox input[type=checkbox]:checked + span::before {
+.c-input-checkbox input:checked + span::before,
+.c-input-radio input:checked + span::before {
   -webkit-box-shadow: inset 0 0 0 1rem #297ef2;
           box-shadow: inset 0 0 0 1rem #297ef2;
 }
-.c-input-checkbox input[type=checkbox]:checked + span::after {
+.c-input-checkbox input:checked + span::after,
+.c-input-radio input:checked + span::after {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
-.c-input-checkbox input[type=checkbox]:not(:checked) + span::after {
+.c-input-checkbox input:not(:checked) + span::after,
+.c-input-radio input:not(:checked) + span::after {
   opacity: 0;
   -webkit-transform: scale(0);
           transform: scale(0);
 }
-.c-input-checkbox.is-error input[type=checkbox]:not(:checked) + span {
+.c-input-checkbox.is-error span,
+.c-input-radio.is-error span {
   color: #f52d2d;
 }
-.c-input-checkbox.is-error input[type=checkbox]:not(:checked) + span::before {
+.c-input-checkbox.is-error span::before,
+.c-input-radio.is-error span::before {
   -webkit-box-shadow: inset 0 0 0 0.125rem #f52d2d;
           box-shadow: inset 0 0 0 0.125rem #f52d2d;
   background-color: rgba(245,45,45,0.25);
+}
+.c-input-radio span::before,
+.c-input-radio span::after {
+  top: 0.15rem;
+  width: 0.8125rem;
+  height: 0.8125rem;
+}
+.c-input-radio span::before {
+  border-radius: 50%;
+}
+.c-input-radio span::after {
+  background: none;
+  content: '•';
+  color: #fff;
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 0.7rem;
 }
 .c-textarea {
   display: block;
@@ -1798,6 +1830,29 @@ body {
  Styleguide Components.form.input-checkbox
 */
 /*
+ Input Checkbox
+
+ Markup:
+ <form>
+    <div>
+        <label class="u-mb-half c-input-radio {{modifier_class}}">
+            <input type="radio" name="radio"/>
+            <span>I'm a radio one</span>
+        </label>
+        <label class="u-mb-half c-input-radio {{modifier_class}}">
+            <input type="radio" name="radio"/>
+            <span>I'm a radio two</span>
+        </label>
+    </div>
+ </form>
+
+ .is-error - Error variant
+
+ Weight: 4
+
+ Styleguide Components.form.input-radio
+*/
+/*
  Textarea
 
  Markup:
@@ -1811,7 +1866,7 @@ body {
  .c-textarea--tiny - Tiny size variant
  .c-textarea--medium - Medium size variant
 
- Weight: 4
+ Weight: 5
 
  Styleguide Components.form.textarea
 */
@@ -1833,7 +1888,7 @@ body {
 
  .is-error - Error variant
 
- Weight: 5
+ Weight: 6
 
  Styleguide Components.form.select
 */
