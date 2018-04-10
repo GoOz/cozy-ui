@@ -217,14 +217,24 @@ body {
 .c-btn-client-mobile[aria-disabled=true] input {
   cursor: not-allowed;
 }
+.c-btn[disabled]:hover,
+.c-btn--regular[disabled]:hover,
+.c-btn-client[disabled]:hover,
+.c-btn-client-mobile[disabled]:hover,
+.c-btn[aria-disabled=true]:hover,
+.c-btn--regular[aria-disabled=true]:hover,
+.c-btn-client[aria-disabled=true]:hover,
+.c-btn-client-mobile[aria-disabled=true]:hover {
+  background-color: #297ef2;
+}
 .c-btn:active,
 .c-btn--regular:active,
 .c-btn-client:active,
 .c-btn-client-mobile:active,
-.c-btn:not([disabled]):not([aria-disabled=true]):hover,
-.c-btn--regular:not([disabled]):not([aria-disabled=true]):hover,
-.c-btn-client:not([disabled]):not([aria-disabled=true]):hover,
-.c-btn-client-mobile:not([disabled]):not([aria-disabled=true]):hover,
+.c-btn:hover,
+.c-btn--regular:hover,
+.c-btn-client:hover,
+.c-btn-client-mobile:hover,
 .c-btn:focus,
 .c-btn--regular:focus,
 .c-btn-client:focus,
@@ -250,6 +260,14 @@ body {
 .c-btn-client-mobile svg {
   fill: currentColor;
 }
+.c-btn--secondary[disabled]:hover,
+.c-btn-client[disabled]:hover,
+.c-btn-client-mobile[disabled]:hover,
+.c-btn--secondary[aria-disabled=true]:hover,
+.c-btn-client[aria-disabled=true]:hover,
+.c-btn-client-mobile[aria-disabled=true]:hover {
+  background-color: #fff;
+}
 .c-btn--secondary:visited,
 .c-btn-client:visited,
 .c-btn-client-mobile:visited {
@@ -258,9 +276,9 @@ body {
 .c-btn--secondary:active,
 .c-btn-client:active,
 .c-btn-client-mobile:active,
-.c-btn--secondary:not([disabled]):not([aria-disabled=true]):hover,
-.c-btn-client:not([disabled]):not([aria-disabled=true]):hover,
-.c-btn-client-mobile:not([disabled]):not([aria-disabled=true]):hover,
+.c-btn--secondary:hover,
+.c-btn-client:hover,
+.c-btn-client-mobile:hover,
 .c-btn--secondary:focus,
 .c-btn-client:focus,
 .c-btn-client-mobile:focus {
@@ -270,8 +288,12 @@ body {
   border-color: #f52d2d;
   background-color: #f52d2d;
 }
+.c-btn--danger[disabled]:hover,
+.c-btn--danger[aria-disabled=true]:hover {
+  background-color: #f52d2d;
+}
 .c-btn--danger:active,
-.c-btn--danger:not([disabled]):not([aria-disabled=true]):hover,
+.c-btn--danger:hover,
 .c-btn--danger:focus {
   border-color: #dd0505;
   background-color: #dd0505;
@@ -284,11 +306,15 @@ body {
 .c-btn--danger-outline svg {
   fill: currentColor;
 }
+.c-btn--danger-outline[disabled]:hover,
+.c-btn--danger-outline[aria-disabled=true]:hover {
+  background-color: #fff;
+}
 .c-btn--danger-outline:visited {
   color: #f52d2d;
 }
 .c-btn--danger-outline:active,
-.c-btn--danger-outline:not([disabled]):not([aria-disabled=true]):hover,
+.c-btn--danger-outline:hover,
 .c-btn--danger-outline:focus {
   background-color: #fdcbcb;
 }
@@ -296,8 +322,12 @@ body {
   border-color: #35ce68;
   background-color: #35ce68;
 }
+.c-btn--highlight[disabled]:hover,
+.c-btn--highlight[aria-disabled=true]:hover {
+  background-color: #35ce68;
+}
 .c-btn--highlight:active,
-.c-btn--highlight:not([disabled]):not([aria-disabled=true]):hover,
+.c-btn--highlight:hover,
 .c-btn--highlight:focus {
   border-color: #08b442;
   background-color: #08b442;
@@ -307,10 +337,16 @@ body {
   border-color: #fff;
   background-color: transparent;
 }
+.c-btn--action[disabled]:hover,
+.c-btn--close[disabled]:hover,
+.c-btn--action[aria-disabled=true]:hover,
+.c-btn--close[aria-disabled=true]:hover {
+  background-color: transparent;
+}
 .c-btn--action:active,
 .c-btn--close:active,
-.c-btn--action:not([disabled]):not([aria-disabled=true]):hover,
-.c-btn--close:not([disabled]):not([aria-disabled=true]):hover,
+.c-btn--action:hover,
+.c-btn--close:hover,
 .c-btn--action:focus,
 .c-btn--close:focus {
   background-color: #0b61d6;
@@ -334,7 +370,7 @@ body {
   margin: 0;
 }
 .c-btn--action:active,
-.c-btn--action:not([disabled]):not([aria-disabled=true]):hover,
+.c-btn--action:hover,
 .c-btn--action:focus {
   background-color: transparent;
 }
@@ -346,7 +382,7 @@ body {
   margin: 0;
 }
 .c-btn--close:active,
-.c-btn--close:not([disabled]):not([aria-disabled=true]):hover,
+.c-btn--close:hover,
 .c-btn--close:focus {
   background-color: transparent;
 }
@@ -376,12 +412,15 @@ body {
   background-color: #95999d;
   color: #fff;
 }
+.c-btn-alert--info[disabled]:hover,
+.c-btn-alert--info[aria-disabled=true]:hover {
+  background-color: #95999d;
+}
 .c-btn-alert--info:visited {
   color: #fff;
 }
 .c-btn-alert--info:active,
 .c-btn-alert--info:hover,
-.c-btn-alert--info:not([disabled]):not([aria-disabled=true]):hover,
 .c-btn-alert--info:focus {
   color: #e6e6e6;
   background-color: #858a8e;
@@ -456,11 +495,15 @@ body {
   text-decoration: none;
   text-transform: none;
 }
+.c-btn-client-mobile[disabled]:hover,
+.c-btn-client-mobile[aria-disabled=true]:hover {
+  background-color: #297ef2;
+}
 .c-btn-client-mobile:visited {
   color: #fff;
 }
 .c-btn-client-mobile:active,
-.c-btn-client-mobile:not([disabled]):not([aria-disabled=true]):hover,
+.c-btn-client-mobile:hover,
 .c-btn-client-mobile:focus {
   background-color: #297ef2;
 }
@@ -723,7 +766,7 @@ body {
   color: #fff;
   text-align: center;
   font-size: 1rem;
-  line-height: 0.9rem;
+  line-height: 0.8125rem;
 }
 .c-textarea {
   display: block;
@@ -1574,6 +1617,31 @@ body {
 .u-weirdGreen {
   color: #40de8e !important;
 }
+.u-midellipsis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+.u-midellipsis > * {
+  display: inline-block;
+  max-width: 50%;
+  overflow: hidden;
+  white-space: pre;
+}
+.u-midellipsis > :first-child {
+  text-overflow: ellipsis;
+}
+.u-midellipsis > :last-child {
+  text-overflow: clip;
+  direction: rtl;
+}
+@supports (text-overflow: "[...]") {
+  .u-midellipsis > :first-child {
+    text-overflow: "[...]";
+  }
+}
 /*------------------------------------*  Objects
 \*------------------------------------*/
 /*------------------------------------*  Components
@@ -2060,6 +2128,20 @@ Display an avatar of a user or contact with initials or an image
  .u-warn - simple warning text
 
  Styleguide utilities.text.warn
+*/
+/*
+ Middle Ellipsis
+
+ Allows some text to have the ellipsis right in the middle
+
+ Markup: <p class="{{modifier_class}}">
+    <span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise</span>
+    <span>that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a "computing machine" and the first computer programmer.</span>
+ </p>
+
+ .u-midellipsis - Ellipsis in the middle
+
+ Styleguide utilities.text.midellipsis
 */
 /*
  Colored text
