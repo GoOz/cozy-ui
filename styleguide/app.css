@@ -34,12 +34,14 @@ body textarea {
 }
 .c-btn[aria-busy=true] > span::after,
 .c-btn--regular[aria-busy=true] > span::after,
-.c-btn--secondary[aria-busy=true]::after,
-.c-btn--danger-outline[aria-busy=true]::after,
+.c-btn--secondary[aria-busy=true] > span::after,
+.c-btn--danger-outline[aria-busy=true] > span::after,
+.c-btn--subtle[aria-busy=true] > span::after,
+.c-btn--subtle.c-btn--secondary[aria-busy=true] > span::after,
+.c-btn--subtle.c-btn--danger[aria-busy=true] > span::after,
+.c-btn--subtle.c-btn--highlight[aria-busy=true] > span::after,
 .c-btn-client[aria-busy=true] > span::after,
-.c-btn-client[aria-busy=true]::after,
-.c-btn-client-mobile[aria-busy=true] > span::after,
-.c-btn-client-mobile[aria-busy=true]::after {
+.c-btn-client-mobile[aria-busy=true] > span::after {
   content: '';
   display: inline-block;
   vertical-align: middle;
@@ -50,6 +52,7 @@ body textarea {
 }
 .c-btn[aria-busy=true] > span::after,
 .c-btn--regular[aria-busy=true] > span::after,
+.c-btn--subtle[aria-busy=true] > span::after,
 .c-btn-client[aria-busy=true] > span::after,
 .c-btn-client-mobile[aria-busy=true] > span::after {
   width: 1rem;
@@ -57,14 +60,20 @@ body textarea {
 }
 .c-btn[aria-busy=true] > span::after,
 .c-btn--regular[aria-busy=true] > span::after,
-.c-btn--secondary[aria-busy=true]::after,
-.c-btn--danger-outline[aria-busy=true]::after,
+.c-btn--secondary[aria-busy=true] > span::after,
+.c-btn--danger-outline[aria-busy=true] > span::after,
+.c-btn--subtle[aria-busy=true] > span::after,
+.c-btn--subtle.c-btn--secondary[aria-busy=true] > span::after,
+.c-btn--subtle.c-btn--danger[aria-busy=true] > span::after,
+.c-btn--subtle.c-btn--highlight[aria-busy=true] > span::after,
 .c-btn-client[aria-busy=true] > span::after,
-.c-btn-client[aria-busy=true]::after,
-.c-btn-client-mobile[aria-busy=true] > span::after,
-.c-btn-client-mobile[aria-busy=true]::after {
+.c-btn-client-mobile[aria-busy=true] > span::after {
   -webkit-animation: spin 1s linear infinite;
           animation: spin 1s linear infinite;
+}
+.c-btn--subtle.c-btn--secondary[aria-busy=true] > span::after,
+.c-btn--subtle.c-btn--highlight[aria-busy=true] > span::after {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMiAzMicgd2lkdGg9JzEyJyBoZWlnaHQ9JzEyJyBmaWxsPSdyZ2IoMTQ2LDE2MCwxNzgpJz48cGF0aCBvcGFjaXR5PScuMjUnIGQ9J00xNiAwYTE2IDE2IDAgMCAwIDAgMzIgMTYgMTYgMCAwIDAgMC0zMm0wIDRhMTIgMTIgMCAwIDEgMCAyNCAxMiAxMiAwIDAgMSAwLTI0Jy8+PHBhdGggZD0nTTE2IDBhMTYgMTYgMCAwIDEgMTYgMTZoLTRhMTIgMTIgMCAwIDAtMTItMTJ6Jy8+PC9zdmc+Cg==");
 }
 .c-btn[aria-busy=true] > span::after,
 .c-btn--regular[aria-busy=true] > span::after,
@@ -72,15 +81,467 @@ body textarea {
 .c-btn-client-mobile[aria-busy=true] > span::after {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMiAzMicgd2lkdGg9JzEyJyBoZWlnaHQ9JzEyJyBmaWxsPSd3aGl0ZSc+PHBhdGggb3BhY2l0eT0nLjI1JyBkPSdNMTYgMGExNiAxNiAwIDAgMCAwIDMyIDE2IDE2IDAgMCAwIDAtMzJtMCA0YTEyIDEyIDAgMCAxIDAgMjQgMTIgMTIgMCAwIDEgMC0yNCcvPjxwYXRoIGQ9J00xNiAwYTE2IDE2IDAgMCAxIDE2IDE2aC00YTEyIDEyIDAgMCAwLTEyLTEyeicvPjwvc3ZnPgo=");
 }
-.c-btn--secondary[aria-busy=true]::after,
-.c-btn-client[aria-busy=true]::after,
-.c-btn-client-mobile[aria-busy=true]::after {
+.c-btn--secondary[aria-busy=true] > span::after,
+.c-btn--subtle[aria-busy=true] > span::after,
+.c-btn-client[aria-busy=true] > span::after,
+.c-btn-client-mobile[aria-busy=true] > span::after {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMiAzMicgd2lkdGg9JzEyJyBoZWlnaHQ9JzEyJyBmaWxsPScjMjk3ZWYyJz4KICA8cGF0aCBvcGFjaXR5PScuMjUnIGQ9J00xNiAwYTE2IDE2IDAgMCAwIDAgMzIgMTYgMTYgMCAwIDAgMC0zMm0wIDRhMTIgMTIgMCAwIDEgMCAyNCAxMiAxMiAwIDAgMSAwLTI0Jy8+CiAgPHBhdGggZD0nTTE2IDBhMTYgMTYgMCAwIDEgMTYgMTZoLTRhMTIgMTIgMCAwIDAtMTItMTJ6Jy8+Cjwvc3ZnPgo=");
 }
-.c-btn--danger-outline[aria-busy=true]::after {
+.c-btn--danger-outline[aria-busy=true] > span::after,
+.c-btn--subtle.c-btn--danger[aria-busy=true] > span::after {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMiAzMicgd2lkdGg9JzEyJyBoZWlnaHQ9JzEyJyBmaWxsPScjRjUyRDJEJz4KICA8cGF0aCBvcGFjaXR5PScuMjUnIGQ9J00xNiAwYTE2IDE2IDAgMCAwIDAgMzIgMTYgMTYgMCAwIDAgMC0zMm0wIDRhMTIgMTIgMCAwIDEgMCAyNCAxMiAxMiAwIDAgMSAwLTI0Jy8+CiAgPHBhdGggZD0nTTE2IDBhMTYgMTYgMCAwIDEgMTYgMTZoLTRhMTIgMTIgMCAwIDAtMTItMTJ6Jy8+Cjwvc3ZnPgo=");
 }
-@import '../../node_modules/normalize.css/normalize.css';
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+
+figcaption,
+figure,
+main { /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+
+details, /* 1 */
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10-.
+ */
+
+[hidden] {
+  display: none;
+}
+
 body {
   font: 1em/1.5;
   -moz-osx-font-smoothing: grayscale;
@@ -123,7 +584,7 @@ body {
 }
 @media (max-width: 63.9375rem) {
   [role=application] {
-    overflow: visible;
+    overflow-y: visible;
   }
 }
 html,
@@ -154,6 +615,9 @@ body {
   }
 }
 @media (min-width: 64rem) {
+  .u-hide--tablet {
+    display: none !important;
+  }
 }
 @media (min-width: 48.0625rem) {
   .u-hide--desk {
@@ -193,6 +657,12 @@ body {
 .u-charcoalGrey {
   color: #32363f !important;
 }
+.u-zircon {
+  color: #f1f7ff !important;
+}
+.u-frenchPass {
+  color: #c2dcff !important;
+}
 .u-dodgerBlue {
   color: #297ef2 !important;
 }
@@ -210,6 +680,9 @@ body {
 }
 .u-texasRose {
   color: #ffae5f !important;
+}
+.u-chablis {
+  color: #fff2f2 !important;
 }
 .u-yourPink {
   color: #fdcbcb !important;
@@ -250,6 +723,13 @@ body {
 .u-weirdGreen {
   color: #40de8e !important;
 }
+.u-ellipsis {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .u-midellipsis {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,20 +765,22 @@ body {
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 0 0.25em;
-  border: 1px solid #297ef2;
+  border-width: 1px;
+  border-style: solid;
   border-radius: 2px;
   min-height: 2.5rem;
   min-width: 7rem;
   padding: 0.2rem 1rem;
-  background: #297ef2;
   vertical-align: top;
   text-align: center;
-  color: #fff;
   font-size: 0.875rem;
   line-height: 1;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
+  background-color: #297ef2;
+  color: #fff;
+  border-color: #297ef2;
 }
 .c-btn svg,
 .c-btn--regular svg,
@@ -334,12 +816,6 @@ body {
           justify-content: center;
   width: 100%;
 }
-.c-btn:visited,
-.c-btn--regular:visited,
-.c-btn-client:visited,
-.c-btn-client-mobile:visited {
-  color: #fff;
-}
 .c-btn[disabled],
 .c-btn--regular[disabled],
 .c-btn-client[disabled],
@@ -361,15 +837,18 @@ body {
 .c-btn-client-mobile[aria-disabled=true] input {
   cursor: not-allowed;
 }
-.c-btn[disabled]:hover,
-.c-btn--regular[disabled]:hover,
-.c-btn-client[disabled]:hover,
-.c-btn-client-mobile[disabled]:hover,
-.c-btn[aria-disabled=true]:hover,
-.c-btn--regular[aria-disabled=true]:hover,
-.c-btn-client[aria-disabled=true]:hover,
-.c-btn-client-mobile[aria-disabled=true]:hover {
-  background-color: #297ef2;
+.c-btn[aria-busy=true] > span::after,
+.c-btn--regular[aria-busy=true] > span::after,
+.c-btn-client[aria-busy=true] > span::after,
+.c-btn-client-mobile[aria-busy=true] > span::after {
+  position: relative;
+  top: -0.0625rem;
+}
+.c-btn:visited,
+.c-btn--regular:visited,
+.c-btn-client:visited,
+.c-btn-client-mobile:visited {
+  color: #fff;
 }
 .c-btn:active,
 .c-btn--regular:active,
@@ -383,14 +862,86 @@ body {
 .c-btn--regular:focus,
 .c-btn-client:focus,
 .c-btn-client-mobile:focus {
+  border-color: #0b61d6;
   background-color: #0b61d6;
 }
-.c-btn[aria-busy=true] > span::after,
-.c-btn--regular[aria-busy=true] > span::after,
-.c-btn-client[aria-busy=true] > span::after,
-.c-btn-client-mobile[aria-busy=true] > span::after {
-  position: relative;
-  top: -0.0625rem;
+.c-btn[disabled]:hover,
+.c-btn--regular[disabled]:hover,
+.c-btn-client[disabled]:hover,
+.c-btn-client-mobile[disabled]:hover,
+.c-btn[aria-disabled=true]:hover,
+.c-btn--regular[aria-disabled=true]:hover,
+.c-btn-client[aria-disabled=true]:hover,
+.c-btn-client-mobile[aria-disabled=true]:hover {
+  background-color: #297ef2;
+}
+.c-btn--highlight {
+  background-color: #35ce68;
+  color: #fff;
+  border-color: #35ce68;
+}
+.c-btn--highlight:visited {
+  color: #fff;
+}
+.c-btn--highlight:active,
+.c-btn--highlight:hover,
+.c-btn--highlight:focus {
+  border-color: #08b442;
+  background-color: #08b442;
+}
+.c-btn--highlight[disabled]:hover,
+.c-btn--highlight[aria-disabled=true]:hover {
+  background-color: #35ce68;
+}
+.c-btn--alpha,
+.c-btn--action,
+.c-btn--close {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+.c-btn--alpha:visited,
+.c-btn--action:visited,
+.c-btn--close:visited {
+  color: #fff;
+}
+.c-btn--alpha:active,
+.c-btn--action:active,
+.c-btn--close:active,
+.c-btn--alpha:hover,
+.c-btn--action:hover,
+.c-btn--close:hover,
+.c-btn--alpha:focus,
+.c-btn--action:focus,
+.c-btn--close:focus {
+  border-color: #0b61d6;
+  background-color: #0b61d6;
+}
+.c-btn--alpha[disabled]:hover,
+.c-btn--action[disabled]:hover,
+.c-btn--close[disabled]:hover,
+.c-btn--alpha[aria-disabled=true]:hover,
+.c-btn--action[aria-disabled=true]:hover,
+.c-btn--close[aria-disabled=true]:hover {
+  background-color: transparent;
+}
+.c-btn--danger {
+  background-color: #f52d2d;
+  color: #fff;
+  border-color: #f52d2d;
+}
+.c-btn--danger:visited {
+  color: #fff;
+}
+.c-btn--danger:active,
+.c-btn--danger:hover,
+.c-btn--danger:focus {
+  border-color: #dd0505;
+  background-color: #dd0505;
+}
+.c-btn--danger[disabled]:hover,
+.c-btn--danger[aria-disabled=true]:hover {
+  background-color: #f52d2d;
 }
 .c-btn--secondary,
 .c-btn-client,
@@ -398,19 +949,6 @@ body {
   background-color: #fff;
   color: #000;
   border-color: #d6d8da;
-}
-.c-btn--secondary svg,
-.c-btn-client svg,
-.c-btn-client-mobile svg {
-  fill: currentColor;
-}
-.c-btn--secondary[disabled]:hover,
-.c-btn-client[disabled]:hover,
-.c-btn-client-mobile[disabled]:hover,
-.c-btn--secondary[aria-disabled=true]:hover,
-.c-btn-client[aria-disabled=true]:hover,
-.c-btn-client-mobile[aria-disabled=true]:hover {
-  background-color: #fff;
 }
 .c-btn--secondary:visited,
 .c-btn-client:visited,
@@ -426,33 +964,21 @@ body {
 .c-btn--secondary:focus,
 .c-btn-client:focus,
 .c-btn-client-mobile:focus {
+  border-color: #d6d8da;
   background-color: #d6d8da;
 }
-.c-btn--danger {
-  border-color: #f52d2d;
-  background-color: #f52d2d;
-}
-.c-btn--danger[disabled]:hover,
-.c-btn--danger[aria-disabled=true]:hover {
-  background-color: #f52d2d;
-}
-.c-btn--danger:active,
-.c-btn--danger:hover,
-.c-btn--danger:focus {
-  border-color: #dd0505;
-  background-color: #dd0505;
+.c-btn--secondary[disabled]:hover,
+.c-btn-client[disabled]:hover,
+.c-btn-client-mobile[disabled]:hover,
+.c-btn--secondary[aria-disabled=true]:hover,
+.c-btn-client[aria-disabled=true]:hover,
+.c-btn-client-mobile[aria-disabled=true]:hover {
+  background-color: #fff;
 }
 .c-btn--danger-outline {
   background-color: #fff;
   color: #f52d2d;
   border-color: #fdcbcb;
-}
-.c-btn--danger-outline svg {
-  fill: currentColor;
-}
-.c-btn--danger-outline[disabled]:hover,
-.c-btn--danger-outline[aria-disabled=true]:hover {
-  background-color: #fff;
 }
 .c-btn--danger-outline:visited {
   color: #f52d2d;
@@ -460,40 +986,12 @@ body {
 .c-btn--danger-outline:active,
 .c-btn--danger-outline:hover,
 .c-btn--danger-outline:focus {
+  border-color: #fdcbcb;
   background-color: #fdcbcb;
 }
-.c-btn--highlight {
-  border-color: #35ce68;
-  background-color: #35ce68;
-}
-.c-btn--highlight[disabled]:hover,
-.c-btn--highlight[aria-disabled=true]:hover {
-  background-color: #35ce68;
-}
-.c-btn--highlight:active,
-.c-btn--highlight:hover,
-.c-btn--highlight:focus {
-  border-color: #08b442;
-  background-color: #08b442;
-}
-.c-btn--action,
-.c-btn--close {
-  border-color: #fff;
-  background-color: transparent;
-}
-.c-btn--action[disabled]:hover,
-.c-btn--close[disabled]:hover,
-.c-btn--action[aria-disabled=true]:hover,
-.c-btn--close[aria-disabled=true]:hover {
-  background-color: transparent;
-}
-.c-btn--action:active,
-.c-btn--close:active,
-.c-btn--action:hover,
-.c-btn--close:hover,
-.c-btn--action:focus,
-.c-btn--close:focus {
-  background-color: #0b61d6;
+.c-btn--danger-outline[disabled]:hover,
+.c-btn--danger-outline[aria-disabled=true]:hover {
+  background-color: #fff;
 }
 .c-link--upload {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBmaWxsPSIjMzIzNjNmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNjMsMTAyLjQxNDIxNCBMMjYxLjcwNzEwNywxMDMuNzA3MTA3IEMyNjEuMzE2NTgyLDEwNC4wOTc2MzEgMjYwLjY4MzQxOCwxMDQuMDk3NjMxIDI2MC4yOTI4OTMsMTAzLjcwNzEwNyBDMjU5LjkwMjM2OSwxMDMuMzE2NTgyIDI1OS45MDIzNjksMTAyLjY4MzQxOCAyNjAuMjkyODkzLDEwMi4yOTI4OTMgTDI2My4yOTI4OTMsOTkuMjkyODkzMiBDMjYzLjY4MzQxOCw5OC45MDIzNjg5IDI2NC4zMTY1ODIsOTguOTAyMzY4OSAyNjQuNzA3MTA3LDk5LjI5Mjg5MzIgTDI2Ny43MDcxMDcsMTAyLjI5Mjg5MyBDMjY4LjA5NzYzMSwxMDIuNjgzNDE4IDI2OC4wOTc2MzEsMTAzLjMxNjU4MiAyNjcuNzA3MTA3LDEwMy43MDcxMDcgQzI2Ny4zMTY1ODIsMTA0LjA5NzYzMSAyNjYuNjgzNDE4LDEwNC4wOTc2MzEgMjY2LjI5Mjg5MywxMDMuNzA3MTA3IEwyNjUsMTAyLjQxNDIxNCBMMjY1LDExMCBDMjY1LDExMC41NTIyODUgMjY0LjU1MjI4NSwxMTEgMjY0LDExMSBDMjYzLjQ0NzcxNSwxMTEgMjYzLDExMC41NTIyODUgMjYzLDExMCBMMjYzLDEwMi40MTQyMTQgWiBNMjU3LDk4IEwyNzEsOTggQzI3MS41NTIyODUsOTggMjcyLDk3LjU1MjI4NDcgMjcyLDk3IEMyNzIsOTYuNDQ3NzE1MyAyNzEuNTUyMjg1LDk2IDI3MSw5NiBMMjU3LDk2IEMyNTYuNDQ3NzE1LDk2IDI1Niw5Ni40NDc3MTUzIDI1Niw5NyBDMjU2LDk3LjU1MjI4NDcgMjU2LjQ0NzcxNSw5OCAyNTcsOTggWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI1NiAtOTYpIi8+Cjwvc3ZnPgo=");
@@ -517,6 +1015,7 @@ body {
 .c-btn--action:hover,
 .c-btn--action:focus {
   background-color: transparent;
+  border-color: transparent;
 }
 .c-btn--close {
   border-color: transparent;
@@ -529,6 +1028,7 @@ body {
 .c-btn--close:hover,
 .c-btn--close:focus {
   background-color: transparent;
+  border-color: transparent;
 }
 .c-btn-alert,
 .c-btn-alert--error,
@@ -540,6 +1040,7 @@ body {
   background-color: #fff;
   font-weight: bold;
   font-size: 0.9rem;
+  text-decoration: none;
 }
 .c-btn-alert--error {
   color: #f52d2d;
@@ -660,27 +1161,143 @@ body {
   border: 0.3em solid #fff;
   background: #fff url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgdmlld0JveD0iMCAwIDUyIDUyIiBpZD0iY296eS1pY29uIj4KICA8cGF0aCBmaWxsPSIjMjk3RUYyIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01NTguMjMwOTgsNDQgTDUzMy43NjkwMiw0NCBDNTI2LjE3NTA0Niw0NCA1MjAsMzcuNzU2MDcyIDUyMCwzMC4wODA2MDkyIEM1MjAsMjYuNDIwMzc1NSA1MjEuMzkzOTYyLDIyLjk2Mjg0NjMgNTIzLjkyNzAyMSwyMC4zNDY1OTMyIEM1MjYuMTQ1OTE4LDE4LjA1Njk3NzkgNTI5LjAyMDE4NSwxNi42MzE3NDQ4IDUzMi4xMjk1NTQsMTYuMjYwOTk1MSBDNTMyLjQ5Njc2OSwxMy4xMTc1MDAzIDUzMy45MDUyOTUsMTAuMjExMzY5MyA1MzYuMTcyMDQ1LDcuOTY5MDE2NjggQzUzOC43NjAyMzgsNS40MDczNzgyMyA1NDIuMTc5NjA3LDQgNTQ1LjgwMDc4OCw0IEM1NDkuNDIwOTI5LDQgNTUyLjg0MTMzOSw1LjQwNzM3ODIzIDU1NS40Mjk1MzIsNy45Njc5NjYzOSBDNTU3LjY4NjkxOSwxMC4yMDA4NjY1IDU1OS4wOTEyODQsMTMuMDkxMjQzMyA1NTkuNDY3ODYyLDE2LjIxNzkzMzYgQzU2Ni40ODI0MDUsMTYuODUzMzU0MyA1NzIsMjIuODI4NDEwMiA1NzIsMzAuMDgxNjU5NCBDNTcyLDM3Ljc1NjA3MiA1NjUuODIwNzkzLDQ0IDU1OC4yMjk5NCw0NCBMNTU4LjIzMDk4LDQ0IFogTTU1OC4wNjgwNzcsNDAuOTk4OTU0NyBMNTU4LjE3MTU5OSw0MC45OTg5NTQ3IEM1NjQuMTQyNzQ4LDQwLjk5ODk1NDcgNTY5LDM2LjA4ODM1NDYgNTY5LDMwLjA1MjAxNjcgQzU2OSwyNC4wMTY3MjQxIDU2NC4xNDI3NDgsMTkuMTA2MTIzOSA1NTguMTcxNTk5LDE5LjEwNjEyMzkgTDU1OC4wNjI5MDEsMTkuMTA2MTIzOSBDNTU3LjI4MzM4LDE5LjEwNjEyMzkgNTU2LjY0NDY0OSwxOC40Nzg5NzIgNTU2LjYyNzA1MSwxNy42ODg3NjA0IEM1NTYuNDkyNDcyLDExLjc5MzUzMTcgNTUxLjYzNzI5LDcgNTQ1LjgwMjc5MSw3IEM1MzkuOTY4MjkxLDcgNTM1LjExMTAzOSwxMS43OTU2MjIyIDUzNC45Nzc0OTUsMTcuNjkwODUxIEM1MzQuOTU5ODk2LDE4LjQ2NjQyODkgNTM0LjM0MTg3LDE5LjA5MTQ5MDQgNTMzLjU3MzczNywxOS4xMDkyNTk3IEM1MjcuNzQzMzc4LDE5LjI0NTE0MjYgNTIzLDI0LjE1MzY1MjIgNTIzLDMwLjA1MzA2MTkgQzUyMywzNi4wODkzOTk5IDUyNy44NTcyNTIsNDEgNTMzLjgyODQwMSw0MSBMNTMzLjkxNjM5NSw0MSBMNTMzLjk1MDU1Nyw0MC45OTc5MDk0IEM1MzMuOTgxNjE0LDQwLjk5NzkwOTQgNTM0LjAxMjY3LDQwLjk5NzkwOTQgNTM0LjA0MzcyNyw0MSBMNTU4LjA2NDk3MSw0MSBMNTU4LjA2ODA3Nyw0MC45OTg5NTQ3IFogTTU1My43NjY0MjEsMjkuMjIyNzMxOCBDNTUyLjg5MDY3NiwyOC42MzgxMDAzIDU1Mi44NDc2NzYsMjcuNTY0MzA5MSA1NTIuODQ1NTc4LDI3LjUxNzEwOTQgQzU1Mi44MzkyODUsMjcuMjI1MzMwMSA1NTIuNjA2NDUzLDI2Ljk5NTc2ODMgNTUyLjMyMTE4LDI3LjAwMDA1OTIgQzU1Mi4wMzU5MDgsMjcuMDA1NDIyOCA1NTEuODA5MzY4LDI3LjI0Njc4NDQgNTUxLjgxNDYxMiwyNy41MzY0MTg1IEM1NTEuODE2NzEsMjcuNTc1MDM2MyA1NTEuODMxMzkzLDI4LjA3OTIxMzkgNTUyLjA2NjMyMywyOC42NzM1IEM1NDguOTQ5MzAyLDMxLjY5NDI3NTMgNTQ0LjA1MTQyNywzMS42OTg1NjYgNTQwLjkyODExMywyOC42OTE3MzYzIEM1NDEuMTY5MzM2LDI4LjA4ODg2ODQgNTQxLjE4NTA2OCwyNy41NzYxMDkgNTQxLjE4NTA2OCwyNy41Mzc0OTExIEM1NDEuMTkwMzEyLDI3LjI0Nzg1NzIgNTQwLjk2NDgyMSwyNy4wMDg2NDA5IDU0MC42ODE2NDYsMjcuMDAxMTMxOSBDNTQwLjQwMTYxOCwyNi45OTI1NTAyIDU0MC4xNjM1NDEsMjcuMjI2NDAyNyA1NDAuMTU0MTAyLDI3LjUxNjAzNjggQzU0MC4xNTQxMDIsMjcuNTU4OTQ1NSA1NDAuMTEyMTUsMjguNjM3MDI3NSA1MzkuMjM0MzA4LDI5LjIyMTY1OTIgQzUzOC45OTUxODMsMjkuMzgyNTY2OSA1MzguOTI4MDYsMjkuNzA5NzQ2MSA1MzkuMDg0MzMsMjkuOTUzMjUzMiBDNTM5LjE4MjkxNywzMC4xMDc3MjQ2IDUzOS4zNDY1MjksMzAuMTkyNDY5NCA1MzkuNTE2NDM0LDMwLjE5MjQ2OTQgQzUzOS42MTI5MjMsMzAuMTkyNDY5NCA1MzkuNzEwNDYxLDMwLjE2NDU3ODcgNTM5Ljc5NzUxMiwzMC4xMDY2NTE5IEM1NDAuMDIzMDAzLDI5Ljk1NjQ3MTMgNTQwLjIxMTc4NiwyOS43ODQ4MzYzIDU0MC4zNzAxNTQsMjkuNjAyNDc0MiBDNTQyLjEwNDg2MiwzMS4yMDA4MjQ3IDU0NC4yOTY4NDUsMzIgNTQ2LjQ4ODgyOCwzMiBDNTQ4LjY4NjA1NSwzMiA1NTAuODgzMjgyLDMxLjE5NzYwNjYgNTUyLjYyMTEzNiwyOS41OTE3NDcxIEM1NTIuNzgwNTUzLDI5Ljc3NjI1NDYgNTUyLjk3MTQzNCwyOS45NTIxODA0IDU1My4yMDMyMTgsMzAuMTA2NjUxOSBDNTUzLjI4OTIxOSwzMC4xNjQ1Nzg3IDU1My4zODc4MDYsMzAuMTkyNDY5NCA1NTMuNDg0Mjk1LDMwLjE5MjQ2OTQgQzU1My42NTIxMDIsMzAuMTkyNDY5NCA1NTMuODE2NzYzLDMwLjEwNjY1MTkgNTUzLjkxNjM5OSwyOS45NTIxODA0IEM1NTQuMDcxNjIsMjkuNzA3NjAwNiA1NTQuMDA0NDk3LDI5LjM3OTM0ODggNTUzLjc2NjQyMSwyOS4yMjA1ODY0IEw1NTMuNzY2NDIxLDI5LjIyMjczMTggWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUyMCkiLz4KPC9zdmc+Cg==") 0 0/contain no-repeat;
 }
-.c-btn--tiny {
+.c-btn.c-btn--tiny {
   min-height: 1.5rem;
   min-width: 5rem;
   padding: 0.15rem 1rem;
 }
-.c-btn--small {
+.c-btn.c-btn--small {
   min-height: 2rem;
   min-width: 6rem;
   padding: 0.2rem 0.5rem;
 }
-.c-btn--large {
+.c-btn.c-btn--large {
   min-height: 3rem;
   min-width: 10rem;
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
 }
-.c-btn--full {
+.c-btn.c-btn--full {
+  width: 100%;
+  margin: 0;
+}
+.c-btn.c-btn--narrow {
+  min-width: auto;
+}
+.c-btn--subtle {
+  color: #297ef2;
+  min-height: auto;
+  min-width: auto;
+  border: 0;
+  margin: 1rem 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.c-btn--subtle:active,
+.c-btn--subtle:focus,
+.c-btn--subtle:hover {
+  color: #0b61d6;
+}
+.c-btn--subtle svg {
+  fill: currentColor;
+  margin-right: 0.4rem;
+}
+.c-btn--subtle svg:only-child {
+  margin: 0;
+}
+.c-btn--subtle > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
-.c-btn--narrow {
-  min-width: auto;
+.c-btn--subtle[disabled],
+.c-btn--subtle[aria-disabled=true] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.c-btn--subtle[disabled]:hover,
+.c-btn--subtle[aria-disabled=true]:hover {
+  background: transparent;
+}
+.c-btn--subtle:active,
+.c-btn--subtle:hover,
+.c-btn--subtle:focus {
+  color: #0b61d6;
+  background: transparent;
+}
+.c-btn--subtle[aria-busy=true] > span::after {
+  position: relative;
+  top: -0.0625rem;
+}
+* + .c-btn--subtle {
+  margin-left: 1em;
+}
+.c-btn--subtle.c-btn--tiny {
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  font-size: 0.6rem;
+}
+.c-btn--subtle.c-btn--small {
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  font-size: 0.75rem;
+}
+.c-btn--subtle.c-btn--large {
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+.c-btn--subtle.c-btn--danger {
+  color: #f52d2d;
+}
+.c-btn--subtle.c-btn--danger:active,
+.c-btn--subtle.c-btn--danger:focus,
+.c-btn--subtle.c-btn--danger:hover {
+  color: #dd0505;
+}
+.c-btn--subtle.c-btn--highlight {
+  color: #35ce68;
+}
+.c-btn--subtle.c-btn--highlight:active,
+.c-btn--subtle.c-btn--highlight:focus,
+.c-btn--subtle.c-btn--highlight:hover {
+  color: #08b442;
+}
+.c-btn--subtle.c-btn--regular {
+  color: #297ef2;
+}
+.c-btn--subtle.c-btn--regular:active,
+.c-btn--subtle.c-btn--regular:focus,
+.c-btn--subtle.c-btn--regular:hover {
+  color: #0b61d6;
+}
+.c-btn--subtle.c-btn--secondary {
+  color: #d6d8da;
+}
+.c-btn--subtle.c-btn--secondary:active,
+.c-btn--subtle.c-btn--secondary:focus,
+.c-btn--subtle.c-btn--secondary:hover {
+  color: #d6d8da;
+}
+.c-btn--subtle.c-btn--secondary:active,
+.c-btn--subtle.c-btn--secondary:focus,
+.c-btn--subtle.c-btn--secondary:hover {
+  color: #95999d;
 }
 [data-input=radio],
 [data-input=checkbox] {
@@ -1057,7 +1674,8 @@ body {
     display: block;
     overflow: visible;
   }
-  .o-layout--2panes:before {
+  .o-layout--2panes:before,
+  .o-layout--2panes:after {
     content: '';
     display: block;
     height: 3rem;
@@ -1089,11 +1707,6 @@ body {
   height: auto;
 }
 @media (max-width: 63.9375rem) {
-  .o-layout--2panes:after {
-    content: '';
-    display: block;
-    height: 3rem;
-  }
   .o-layout--2panes > aside {
     position: fixed;
     bottom: 0;
@@ -1118,6 +1731,139 @@ body {
     height: 3rem;
     width: 100%;
   }
+}
+/*
+ * NOTIFICATIONS
+ * =============
+ *
+ * This file contains all needs for alerts
+ */
+@media all and (min-width: 40rem) {
+}
+@media all and (min-width: 40rem) {
+}
+@media all and (min-width: 40rem) {
+}
+.c-avatar {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f5f6f7;
+  color: #d6d8da;
+}
+.c-avatar--small {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+}
+.c-avatar--medium {
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+}
+.c-avatar--medium svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.c-avatar-initials {
+  font-weight: bold;
+  line-height: 1;
+}
+.c-avatar-image {
+  width: 100%;
+}
+.c-chip {
+  border-radius: 1.25rem;
+  height: 2.5rem;
+  background: #f5f6f7;
+  padding: 0.75rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.c-chip--round {
+  width: 2.5rem;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.c-chip-separator {
+  width: 1px;
+  border-left: 1px solid #d6d8da;
+  display: inline-block;
+  height: 100%;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.c-chip-button {
+  cursor: pointer;
+  color: #5d6165;
+}
+.c-chip-button--disabled {
+  color: #95999d;
+}
+@media (max-width: 63.9375rem) {
+}
+@media (max-width: 63.9375rem) {
+}
+@media (max-width: 63.9375rem) {
+}
+@media (max-width: 63.9375rem) {
+}
+@media (max-width: 48rem) {
+}
+@media (max-width: 33.9375rem) {
+}
+@media (max-width: 35rem) {
+}
+@media (max-width: 39rem) {
+}
+@media (max-width: 46rem) {
+}
+@media (max-width: 56rem) {
+}
+@media (max-width: 66rem) {
+}
+@media (max-width: 48rem) {
+}
+@media (max-width: 48rem) {
+}
+@media (max-width: 33.9375rem) {
+}
+@media (max-width: 33.9375rem) {
+}
+@media (max-width: 48rem) {
+}
+@media (max-width: 33.9375rem) {
+}
+@media (max-width: 33.9375rem) {
+}
+@media (max-width: 48rem) {
+}
+@media (max-width: 48rem) {
+}
+@media (max-width: 33.9375rem) {
+}
+@media (max-width: 33.9375rem) {
+}
+@media (max-width: 48rem) {
 }
 .c-nav {
   margin: 1.5rem 0;
@@ -1174,6 +1920,7 @@ body {
   display: inline-block;
   margin-right: 0.6875rem;
   color: #95999d;
+  fill: currentColor;
 }
 .is-active .c-nav-icon {
   color: #297ef2;
@@ -1261,6 +2008,332 @@ body {
     color: #5d6165;
   }
 }
+.u-p-0 {
+  padding: 0;
+}
+.u-pt-0 {
+  padding-top: 0;
+}
+.u-pb-0 {
+  padding-bottom: 0;
+}
+.u-pl-0 {
+  padding-left: 0;
+}
+.u-pr-0 {
+  padding-right: 0;
+}
+.u-pv-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.u-ph-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.u-p-1 {
+  padding: 1rem;
+}
+.u-pt-1 {
+  padding-top: 1rem;
+}
+.u-pb-1 {
+  padding-bottom: 1rem;
+}
+.u-pl-1 {
+  padding-left: 1rem;
+}
+.u-pr-1 {
+  padding-right: 1rem;
+}
+.u-pv-1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.u-ph-1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.u-p-2 {
+  padding: 2rem;
+}
+.u-pt-2 {
+  padding-top: 2rem;
+}
+.u-pb-2 {
+  padding-bottom: 2rem;
+}
+.u-pl-2 {
+  padding-left: 2rem;
+}
+.u-pr-2 {
+  padding-right: 2rem;
+}
+.u-pv-2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.u-ph-2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.u-p-3 {
+  padding: 3rem;
+}
+.u-pt-3 {
+  padding-top: 3rem;
+}
+.u-pb-3 {
+  padding-bottom: 3rem;
+}
+.u-pl-3 {
+  padding-left: 3rem;
+}
+.u-pr-3 {
+  padding-right: 3rem;
+}
+.u-pv-3 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.u-ph-3 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.u-p-half {
+  padding: 0.5rem;
+}
+.u-pt-half {
+  padding-top: 0.5rem;
+}
+.u-pb-half {
+  padding-bottom: 0.5rem;
+}
+.u-pl-half {
+  padding-left: 0.5rem;
+}
+.u-pr-half {
+  padding-right: 0.5rem;
+}
+.u-pv-half {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.u-ph-half {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.u-p-1-half {
+  padding: 1.5rem;
+}
+.u-pt-1-half {
+  padding-top: 1.5rem;
+}
+.u-pb-1-half {
+  padding-bottom: 1.5rem;
+}
+.u-pl-1-half {
+  padding-left: 1.5rem;
+}
+.u-pr-1-half {
+  padding-right: 1.5rem;
+}
+.u-pv-1-half {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.u-ph-1-half {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.u-p-2-half {
+  padding: 2.5rem;
+}
+.u-pt-2-half {
+  padding-top: 2.5rem;
+}
+.u-pb-2-half {
+  padding-bottom: 2.5rem;
+}
+.u-pl-2-half {
+  padding-left: 2.5rem;
+}
+.u-pr-2-half {
+  padding-right: 2.5rem;
+}
+.u-pv-2-half {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.u-ph-2-half {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+.u-m-0 {
+  margin: 0;
+}
+.u-mt-0 {
+  margin-top: 0;
+}
+.u-mb-0 {
+  margin-bottom: 0;
+}
+.u-ml-0 {
+  margin-left: 0;
+}
+.u-mr-0 {
+  margin-right: 0;
+}
+.u-mv-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.u-mh-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.u-m-1 {
+  margin: 1rem;
+}
+.u-mt-1 {
+  margin-top: 1rem;
+}
+.u-mb-1 {
+  margin-bottom: 1rem;
+}
+.u-ml-1 {
+  margin-left: 1rem;
+}
+.u-mr-1 {
+  margin-right: 1rem;
+}
+.u-mv-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.u-mh-1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.u-m-2 {
+  margin: 2rem;
+}
+.u-mt-2 {
+  margin-top: 2rem;
+}
+.u-mb-2 {
+  margin-bottom: 2rem;
+}
+.u-ml-2 {
+  margin-left: 2rem;
+}
+.u-mr-2 {
+  margin-right: 2rem;
+}
+.u-mv-2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.u-mh-2 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.u-m-3 {
+  margin: 3rem;
+}
+.u-mt-3 {
+  margin-top: 3rem;
+}
+.u-mb-3 {
+  margin-bottom: 3rem;
+}
+.u-ml-3 {
+  margin-left: 3rem;
+}
+.u-mr-3 {
+  margin-right: 3rem;
+}
+.u-mv-3 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.u-mh-3 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+.u-m-half {
+  margin: 0.5rem;
+}
+.u-mt-half {
+  margin-top: 0.5rem;
+}
+.u-mb-half {
+  margin-bottom: 0.5rem;
+}
+.u-ml-half {
+  margin-left: 0.5rem;
+}
+.u-mr-half {
+  margin-right: 0.5rem;
+}
+.u-mv-half {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.u-mh-half {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.u-m-1-half {
+  margin: 1.5rem;
+}
+.u-mt-1-half {
+  margin-top: 1.5rem;
+}
+.u-mb-1-half {
+  margin-bottom: 1.5rem;
+}
+.u-ml-1-half {
+  margin-left: 1.5rem;
+}
+.u-mr-1-half {
+  margin-right: 1.5rem;
+}
+.u-mv-1-half {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.u-mh-1-half {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.u-m-2-half {
+  margin: 2.5rem;
+}
+.u-mt-2-half {
+  margin-top: 2.5rem;
+}
+.u-mb-2-half {
+  margin-bottom: 2.5rem;
+}
+.u-ml-2-half {
+  margin-left: 2.5rem;
+}
+.u-mr-2-half {
+  margin-right: 2.5rem;
+}
+.u-mv-2-half {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.u-mh-2-half {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+@media (max-width: 33.9375rem) {
+}
+@media (max-width: 63.9375rem) {
+}
 .c-table {
   position: relative;
   display: -webkit-box;
@@ -1324,7 +2397,7 @@ body {
           flex: 0 0 auto;
   height: 3rem;
   width: 100%;
-  border-bottom: 1px solid #d6d8da;
+  border-top: 1px solid #d6d8da;
 }
 .c-table-row:hover,
 .c-table-row-head:hover {
@@ -1341,6 +2414,9 @@ body {
   .c-table-row-head {
     max-width: 100vw;
   }
+}
+.c-table-row-head {
+  border: 0;
 }
 .c-table-row-head:hover {
   background-color: transparent;
@@ -1398,256 +2474,59 @@ body {
   height: 100%;
   background-color: rgba(41,126,242,0.05);
 }
+.c-table-divider + * {
+  border: 0;
+}
 @media (max-width: 48rem) {
   .c-table-divider {
     text-indent: 1rem;
   }
 }
-.c-avatar {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 50%;
-  overflow: hidden;
-  background-color: #f5f6f7;
-  color: #d6d8da;
-}
-.c-avatar--small {
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-}
-.c-avatar--medium {
-  width: 4rem;
-  height: 4rem;
-  font-size: 2rem;
-}
-.c-avatar--medium svg {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-.c-avatar-initials {
-  font-weight: bold;
-  line-height: 1;
-}
-.c-avatar-image {
-  width: 100%;
-}
-.u-p-0 {
-  padding: 0;
-}
-.u-pt-0 {
-  padding-top: 0;
-}
-.u-pb-0 {
-  padding-bottom: 0;
-}
-.u-pl-0 {
-  padding-left: 0;
-}
-.u-pr-0 {
-  padding-right: 0;
-}
-.u-p-1 {
-  padding: 1rem;
-}
-.u-pt-1 {
-  padding-top: 1rem;
-}
-.u-pb-1 {
-  padding-bottom: 1rem;
-}
-.u-pl-1 {
-  padding-left: 1rem;
-}
-.u-pr-1 {
-  padding-right: 1rem;
-}
-.u-p-2 {
-  padding: 2rem;
-}
-.u-pt-2 {
-  padding-top: 2rem;
-}
-.u-pb-2 {
-  padding-bottom: 2rem;
-}
-.u-pl-2 {
-  padding-left: 2rem;
-}
-.u-pr-2 {
-  padding-right: 2rem;
-}
-.u-p-3 {
-  padding: 3rem;
-}
-.u-pt-3 {
-  padding-top: 3rem;
-}
-.u-pb-3 {
-  padding-bottom: 3rem;
-}
-.u-pl-3 {
-  padding-left: 3rem;
-}
-.u-pr-3 {
-  padding-right: 3rem;
-}
-.u-p-half {
-  padding: 0.5rem;
-}
-.u-pt-half {
-  padding-top: 0.5rem;
-}
-.u-pb-half {
-  padding-bottom: 0.5rem;
-}
-.u-pl-half {
-  padding-left: 0.5rem;
-}
-.u-pr-half {
-  padding-right: 0.5rem;
-}
-.u-p-1-half {
-  padding: 1.5rem;
-}
-.u-pt-1-half {
-  padding-top: 1.5rem;
-}
-.u-pb-1-half {
-  padding-bottom: 1.5rem;
-}
-.u-pl-1-half {
-  padding-left: 1.5rem;
-}
-.u-pr-1-half {
-  padding-right: 1.5rem;
-}
-.u-p-2-half {
-  padding: 2.5rem;
-}
-.u-pt-2-half {
-  padding-top: 2.5rem;
-}
-.u-pb-2-half {
-  padding-bottom: 2.5rem;
-}
-.u-pl-2-half {
-  padding-left: 2.5rem;
-}
-.u-pr-2-half {
-  padding-right: 2.5rem;
-}
-.u-m-0 {
-  margin: 0;
-}
-.u-mt-0 {
-  margin-top: 0;
-}
-.u-mb-0 {
-  margin-bottom: 0;
-}
-.u-ml-0 {
-  margin-left: 0;
-}
-.u-mr-0 {
-  margin-right: 0;
-}
-.u-m-1 {
-  margin: 1rem;
-}
-.u-mt-1 {
-  margin-top: 1rem;
-}
-.u-mb-1 {
-  margin-bottom: 1rem;
-}
-.u-ml-1 {
-  margin-left: 1rem;
-}
-.u-mr-1 {
-  margin-right: 1rem;
-}
-.u-m-2 {
-  margin: 2rem;
-}
-.u-mt-2 {
-  margin-top: 2rem;
-}
-.u-mb-2 {
-  margin-bottom: 2rem;
-}
-.u-ml-2 {
-  margin-left: 2rem;
-}
-.u-mr-2 {
-  margin-right: 2rem;
-}
-.u-m-3 {
-  margin: 3rem;
-}
-.u-mt-3 {
-  margin-top: 3rem;
-}
-.u-mb-3 {
-  margin-bottom: 3rem;
-}
-.u-ml-3 {
-  margin-left: 3rem;
-}
-.u-mr-3 {
-  margin-right: 3rem;
-}
-.u-m-half {
-  margin: 0.5rem;
-}
-.u-mt-half {
-  margin-top: 0.5rem;
-}
-.u-mb-half {
-  margin-bottom: 0.5rem;
-}
-.u-ml-half {
-  margin-left: 0.5rem;
-}
-.u-mr-half {
-  margin-right: 0.5rem;
-}
-.u-m-1-half {
-  margin: 1.5rem;
-}
-.u-mt-1-half {
-  margin-top: 1.5rem;
-}
-.u-mb-1-half {
-  margin-bottom: 1.5rem;
-}
-.u-ml-1-half {
-  margin-left: 1.5rem;
-}
-.u-mr-1-half {
-  margin-right: 1.5rem;
-}
-.u-m-2-half {
-  margin: 2.5rem;
-}
-.u-mt-2-half {
-  margin-top: 2.5rem;
-}
-.u-mb-2-half {
-  margin-bottom: 2.5rem;
-}
-.u-ml-2-half {
-  margin-left: 2.5rem;
-}
-.u-mr-2-half {
-  margin-right: 2.5rem;
+.u-c-default {
+  cursor: default;
+}
+.u-c-help {
+  cursor: help;
+}
+.u-c-pointer {
+  cursor: pointer;
+}
+.u-c-wait {
+  cursor: wait;
+}
+.u-c-not-allowed {
+  cursor: not-allowed;
+}
+/*------------------------------------*  Palette: expose all as css variables
+\*------------------------------------*/
+:root {
+  --paleGrey: #f5f6f7;
+  --silver: #d6d8da;
+  --coolGrey: #95999d;
+  --slateGrey: #5d6165;
+  --charcoalGrey: #32363f;
+  --zircon: #f1f7ff;
+  --frenchPass: #c2dcff;
+  --dodgerBlue: #297ef2;
+  --scienceBlue: #0b61d6;
+  --puertoRico: #4dcec5;
+  --emerald: #35ce68;
+  --malachite: #08b442;
+  --texasRose: #ffae5f;
+  --chablis: #fff2f2;
+  --yourPink: #fdcbcb;
+  --pomegranate: #f52d2d;
+  --monza: #dd0505;
+  --portage: #9169f2;
+  --azure: #1fa8f1;
+  --melon: #fd7461;
+  --blazeOrange: #fc6d00;
+  --mango: #ff962f;
+  --pumpkinOrange: #ff7f1b;
+  --darkPeriwinkle: #6984ce;
+  --purpley: #7f6bee;
+  --lightishPurple: #b449e7;
+  --weirdGreen: #40de8e;
 }
 /*------------------------------------*  Objects
 \*------------------------------------*/
@@ -1661,6 +2540,7 @@ body {
  Markup:
  <div class="u-p-1">
      <button class="c-btn {{modifier_class}}"><span>Click me, I'm a button!</span></button>
+     <button class="c-btn c-btn--subtle {{modifier_class}}"><span>Click me, I'm a button!</span></button>
  </div>
 
  .c-btn--secondary - Basic alternative
@@ -1668,7 +2548,7 @@ body {
  .c-btn--danger-outline - Danger outlined
  .c-btn--highlight - Highlighted button to catch the eye
 
- Weight: -1
+ Weight: 1
 
  Styleguide Components.buttons
 */
@@ -1680,11 +2560,14 @@ body {
  Markup:
  <div class="u-p-1">
      <button class="c-btn {{modifier_class}}"><span>Click me</span></button>
+     <button class="c-btn c-btn--subtle {{modifier_class}}"><span>Click me</span></button>
  </div>
 
  .c-btn--tiny - Tiny button (for Alerts mostly)
  .c-btn--small - Small button
  .c-btn--large - Large button
+
+ Weight: 2
 
  Styleguide Components.buttons.sizes
 */
@@ -1696,10 +2579,13 @@ body {
  Markup:
  <div class="u-p-1">
      <button class="c-btn {{modifier_class}}"><span>Click</span></button>
+     <button class="c-btn c-btn--subtle {{modifier_class}}"><span>Click</span></button>
  </div>
 
  .c-btn--narrow - Narrow button (ignore button's min-width)
  .c-btn--full - Full button
+
+ Weight: 3
 
  Styleguide Components.buttons.extension
 */
@@ -1720,12 +2606,22 @@ body {
             <span>Click me, I'm a button!</span>
         </span>
     </button>
+    <button class="c-btn c-btn--subtle {{modifier_class}}">
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+            </svg>
+            <span>Click me, I'm a button!</span>
+        </span>
+    </button>
  </div>
 
  .c-btn--secondary - Basic alternative
  .c-btn--danger - Danger
  .c-btn--danger-outline - Danger outlined
  .c-btn--highlight - Highlighted button to catch the eye
+
+ Weight: 4
 
  Styleguide Components.buttons.icons
 */
@@ -1738,8 +2634,8 @@ body {
 
  Markup:
  <div class="u-p-1">
-     <button class="c-btn--alert {{modifier_class}} u-m-1"><span>Click me, I'm a button!</span></button>
-     <a hre="#" class="c-btn--alert {{modifier_class}} u-m-1"><span>Click me, I'm a link!</span></a>
+     <button class="c-btn-alert {{modifier_class}} u-m-1"><span>Click me, I'm a button!</span></button>
+     <a href="#" class="c-btn-alert {{modifier_class}} u-m-1"><span>Click me, I'm a link!</span></a>
  </div>
 
  .c-btn-alert--error - Error button
@@ -1779,32 +2675,32 @@ body {
         <ul class="c-nav">
             <li class="c-nav-item">
                 <a class="c-nav-link is-active" href="#">
-                    <span class="c-nav-icon">
+                    <span class="c-nav-item__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
                         </svg>
                     </span>
-                    <span class="c-nav-text">Link 1</span>
+                    <span class="c-nav-item__text">Link 1</span>
                 </a>
             </li>
             <li class="c-nav-item">
                 <a class="c-nav-link" href="#">
-                    <span class="c-nav-icon">
+                    <span class="c-nav-item__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
                         </svg>
                     </span>
-                    <span class="c-nav-text">Link 2</span>
+                    <span class="c-nav-item__text">Link 2</span>
                 </a>
             </li>
             <li class="c-nav-item">
                 <a class="c-nav-link" href="#">
-                    <span class="c-nav-icon">
+                    <span class="c-nav-item__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
                         </svg>
                     </span>
-                    <span class="c-nav-text">Link 3</span>
+                    <span class="c-nav-item__text">Link 3</span>
                 </a>
             </li>
         </ul>
@@ -1812,9 +2708,6 @@ body {
 
     Styleguide Components.nav
 */
-.c-nav-icon {
-  fill: currentColor;
-}
 /*------------------------------------*  Forms
 \*------------------------------------*/
 /*
@@ -2057,6 +2950,45 @@ Display an avatar of a user or contact with initials or an image
 
  Styleguide Components.avatar
 */
+/*
+ Chip
+
+Display an chip that represents complex identity
+
+ Markup:
+<div>
+    <div class="c-chip">
+        <svg class="u-mr-half" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+        </svg>
+        File
+    </div>
+</div>
+<div>
+    <div class="c-chip">
+        <div class="c-avatar c-avatar--small u-mr-half">
+            <img src="https://cozy.io/fr/images/cozy-logo_white.png" class="c-avatar-image" alt="">
+        </div>
+        Ada Lovelace
+    </div>
+</div>
+<div>
+    <div class="c-chip">
+        Developer
+        <span class="c-chip-separator"></span>
+        Ada Lovelace
+    </div>
+</div>
+<div>
+    <div class="c-chip c-chip--round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+        </svg>
+    </div>
+</div>
+
+ Styleguide Components.chip
+*/
 /*------------------------------------*  Utilities
 \*------------------------------------*/
 /*
@@ -2069,26 +3001,36 @@ Display an avatar of a user or contact with initials or an image
     Styleguide utilities
 */
 /*
-    Display
+    Cursor
 
-    Utilities that change the box model of an element or its visibility.
+    Utilities that change cursor when hovering an element.
 
-    Styleguide utilities.display
+     Markup:
+    <a href="https://cozy.io" class="{{modifier_class}}">I'm a link</a>
+
+    .u-c-default - Force default cursor
+    .u-c-help - help cursor for help and/or tips
+    .u-c-pointer - pointer cursor showing the element is clickable
+    .u-c-wait - wait cursor to express that an action is pending
+    .u-c-not-allowed - not allowed cursor, often used on a disabled element, to express your inhability to make an action
+
+    Styleguide utilities.cursor
 */
 /*
-    Visibility
+    Display
 
     Utilities that show or hide an element for a giving viewport size.
 
     Markup:
     <p class="{{modifier_class}}">I'm visible! 🎉</p>
 
-    .u-hidden - Element is visually hidden but still readable by screen-readers
+    .u-visuallyhidden - Element is visually hidden but still readable by screen-readers
     .u-hide - Element is totally hidden (even for screen readers)
     .u-hide--desk - Element is hidden on desktop (>768px)
+    .u-hide--tablet - Element is hidden on tablet (>1024px)
     .u-hide--mob - Element is hidden on mobile (<1023px)
 
-    Styleguide utilities.visibility
+    Styleguide utilities.display
 */
 /*
     Text
@@ -2096,64 +3038,6 @@ Display an avatar of a user or contact with initials or an image
     Utilities that mess only with with wild texts.
 
     Styleguide utilities.text
-*/
-/*
-    Error
-
-    Utilities that give text some semantic color in case of error.
-
-    Markup: <p class="{{modifier_class}}">Somehow you messed up somewhere.</p>
-
-    .u-error - simple error text
-
-    Styleguide utilities.text.error
-*/
-/*
-    Error with warning icon
-
-    Utilities that give text some semantic color in case of important error.
-
-    Markup: <p class="u-error {{modifier_class}}">You really missed, badly.</p>
-
-    .u-error--warning - error with warning icon
-
-    Styleguide utilities.text.errorWarn
-*/
-/*
- Valid
-
- Utilities that give text some semantic color in case of success.
-
- Markup: <p class="{{modifier_class}}">Yay, you did it!</p>
-
- .u-valid - simple valid text
-
- Styleguide utilities.text.valid
-*/
-/*
- Warning
-
- Utilities that give text some semantic color in case of warning.
-
- Markup: <p class="{{modifier_class}}">Ok, something went wrong but it's not that bad.</p>
-
- .u-warn - simple warning text
-
- Styleguide utilities.text.warn
-*/
-/*
- Middle Ellipsis
-
- Allows some text to have the ellipsis right in the middle
-
- Markup: <p class="{{modifier_class}}">
-    <span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise</span>
-    <span>that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a "computing machine" and the first computer programmer.</span>
- </p>
-
- .u-midellipsis - Ellipsis in the middle
-
- Styleguide utilities.text.midellipsis
 */
 /*
  Colored text
@@ -2187,8 +3071,161 @@ Display an avatar of a user or contact with initials or an image
  .u-lightishPurple - lightishPurple color
  .u-weirdGreen - weirdGreen color
 
+ Weight: 1
+
  Styleguide utilities.text.colors
 */
+/*
+    Error
+
+    Utilities that give text some semantic color in case of error.
+
+    Markup: <p class="{{modifier_class}}">Somehow you messed up somewhere.</p>
+
+    .u-error - simple error text
+
+    Weight: 2
+
+    Styleguide utilities.text.error
+*/
+/*
+    Error with warning icon
+
+    Utilities that give text some semantic color in case of important error.
+
+    Markup: <p class="u-error {{modifier_class}}">You really missed, badly.</p>
+
+    .u-error--warning - error with warning icon
+
+    Weight: 3
+
+    Styleguide utilities.text.errorWarn
+*/
+/*
+ Valid
+
+ Utilities that give text some semantic color in case of success.
+
+ Markup: <p class="{{modifier_class}}">Yay, you did it!</p>
+
+ .u-valid - simple valid text
+
+ Weight: 4
+
+ Styleguide utilities.text.valid
+*/
+/*
+ Warning
+
+ Utilities that give text some semantic color in case of warning.
+
+ Markup: <p class="{{modifier_class}}">Ok, something went wrong but it's not that bad.</p>
+
+ .u-warn - simple warning text
+
+ Weight: 5
+
+ Styleguide utilities.text.warn
+*/
+/*
+ Ellipsis
+
+ Adds ellipsis to a long text
+
+ Markup: <p class="{{modifier_class}}">
+    Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise
+ </p>
+
+ .u-ellipsis - Ellipsis at the end
+
+ Weight: 6
+
+ Styleguide utilities.text.ellipsis
+*/
+/*
+ Middle Ellipsis
+
+ Allows some text to have the ellipsis right in the middle
+
+ Markup: <p class="{{modifier_class}}">
+    <span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise</span>
+    <span>that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a "computing machine" and the first computer programmer.</span>
+ </p>
+
+ .u-midellipsis - Ellipsis in the middle
+
+ Weight: 7
+
+ Styleguide utilities.text.midellipsis
+*/
+/*
+ Typography
+
+ Titles & texts styles.
+ NB: You can use any class with any HTML tag.
+
+ Markup:
+ <h1 class="u-title-h1">Heading 1</h1>
+ <h2 class="u-title-h2">Heading 2</h2>
+ <h3 class="u-title-h3">Heading 3</h3>
+ <h4 class="u-title-h4">Heading 4</h4>
+ <p class="u-text">Basic text</p>
+ <p class="u-caption">Caption text</p>
+
+ Weight: -1
+
+ Styleguide utilities.typography
+*/
+.u-title-h1,
+.u-title-h2,
+.u-title-h3,
+.u-title-h4 {
+  font-weight: bold;
+  color: #32363f;
+}
+.u-title-h1 {
+  font-size: 1.5rem;
+  letter-spacing: -0.125rem;
+}
+@media (max-width: 48rem) {
+  .u-title-h1 {
+    font-size: 1.25rem;
+  }
+}
+.u-title-h2 {
+  font-size: 1.25rem;
+}
+@media (max-width: 48rem) {
+  .u-title-h2 {
+    font-size: 1.125rem;
+  }
+}
+.u-title-h3 {
+  font-size: 1.125rem;
+}
+@media (max-width: 48rem) {
+  .u-title-h3 {
+    font-size: 1rem;
+  }
+}
+.u-title-h4 {
+  font-size: 1rem;
+}
+@media (max-width: 48rem) {
+  .u-title-h4 {
+    color: #5d6165;
+  }
+}
+.u-text {
+  font-size: 1rem;
+  line-height: 1.3;
+  color: #32363f;
+}
+.u-caption {
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: #95999d;
+}
 /*
     Margins
 
@@ -2202,6 +3239,20 @@ Display an avatar of a user or contact with initials or an image
     .u-m-2 - Margins on all sides with 2 lines (32px)
     .u-m-2-half - Margins on all sides with 1 line an a half (40px)
     .u-m-3 - Margins on all sides with 2 lines (48px)
+    .u-mv-0 - No vertically margins
+    .u-mv-half - Vertically margins with half a line (8px)
+    .u-mv-1 - Vertically margins with 1 line (16px)
+    .u-mv-1-half - Vertically margins with 1 line an a half (24px)
+    .u-mv-2 - Vertically margins with 2 lines (32px)
+    .u-mv-2-half - Vertically margins with 1 line an a half (40px)
+    .u-mv-3 - Vertically margins with 2 lines (48px)
+    .u-mh-0 - No horizontally margins
+    .u-mh-half - Horizontally margins with half a line (8px)
+    .u-mh-1 - Horizontally margins with 1 line (16px)
+    .u-mh-1-half - Horizontally margins with 1 line an a half (24px)
+    .u-mh-2 - Horizontally margins with 2 lines (32px)
+    .u-mh-2-half - Horizontally margins with 1 line an a half (40px)
+    .u-mh-3 - Horizontally margins with 2 lines (48px)
     .u-mt-0 - No margin Top
     .u-mt-half - Margin Top with half a line (8px)
     .u-mt-1 - Margin Top with 1 line (16px)
@@ -2249,6 +3300,20 @@ Display an avatar of a user or contact with initials or an image
     .u-p-2 - Paddings on all sides with 2 lines (32px)
     .u-p-2-half - Paddings on all sides with 1 line an a half (40px)
     .u-p-3 - Paddings on all sides with 2 lines (48px)
+    .u-pv-0 - No vertically paddings
+    .u-pv-half - Vertically paddings with half a line (8px)
+    .u-pv-1 - Vertically paddings with 1 line (16px)
+    .u-pv-1-half - Vertically paddings with 1 line an a half (24px)
+    .u-pv-2 - Vertically paddings with 2 lines (32px)
+    .u-pv-2-half - Vertically paddings with 1 line an a half (40px)
+    .u-pv-3 - Vertically paddings with 2 lines (48px)
+    .u-ph-0 - No horizontally paddings
+    .u-ph-half - Horizontally paddings with half a line (8px)
+    .u-ph-1 - Horizontally paddings with 1 line (16px)
+    .u-ph-1-half - Horizontally paddings with 1 line an a half (24px)
+    .u-ph-2 - Horizontally paddings with 2 lines (32px)
+    .u-ph-2-half - Horizontally paddings with 1 line an a half (40px)
+    .u-ph-3 - Horizontally paddings with 2 lines (48px)
     .u-pt-0 - No padding Top
     .u-pt-half - Padding Top with half a line (8px)
     .u-pt-1 - Padding Top with 1 line (16px)
