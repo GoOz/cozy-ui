@@ -587,7 +587,7 @@ body {
 }
 @media (max-width: 63.938rem) {
   [role=application] {
-    overflow-y: visible;
+    overflow: visible;
   }
 }
 html,
@@ -1297,17 +1297,12 @@ body {
   color: #0b61d6;
 }
 .c-btn--subtle.c-btn--secondary {
-  color: #d6d8da;
-}
-.c-btn--subtle.c-btn--secondary:active,
-.c-btn--subtle.c-btn--secondary:focus,
-.c-btn--subtle.c-btn--secondary:hover {
-  color: #d6d8da;
-}
-.c-btn--subtle.c-btn--secondary:active,
-.c-btn--subtle.c-btn--secondary:focus,
-.c-btn--subtle.c-btn--secondary:hover {
   color: #95999d;
+}
+.c-btn--subtle.c-btn--secondary:active,
+.c-btn--subtle.c-btn--secondary:focus,
+.c-btn--subtle.c-btn--secondary:hover {
+  color: #5d6165;
 }
 [data-input=radio],
 [data-input=checkbox] {
