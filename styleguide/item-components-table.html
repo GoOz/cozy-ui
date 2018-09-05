@@ -98,7 +98,9 @@
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>You should decide by yourself the sizes of the columns. In those examples we use the style tag but you definitely should use CSS classes.</p>
+                <div class="kss-section__description"><p>For a flexibility purpose, complex tables use <code>&lt;div&gt;</code> element instead of <code>&lt;table&gt;</code> but you still can use <code>&lt;table&gt;</code> for simpler tables, see <strong>table-legacy</strong> below.</p>
+<p>By default, only <code>.c-table-cell--primary</code> has an ellipsis effect, but you can have it on any cell by applying the <code>.c-table-ellipsis</code> class.</p>
+<p>NB: You should decide by yourself the sizes of the columns. In those examples we use the style tag but you definitely should use CSS classes.</p>
 </div>
 
             </article>
@@ -108,36 +110,6 @@
 
 
                 <div class="kss-modifiers__example"><div>
-   <h2>Table with table element</h2>
-   <table class="c-table">
-       <thead class="c-table-head">
-           <tr class="c-table-row-head">
-               <th class="c-table-header" style="width:50%">Header 1</th>
-               <th class="c-table-header" style="width:25%">Header 2</th>
-               <th class="c-table-header" style="width:25%">Header 3</th>
-           </tr>
-       </thead>
-       <tbody class="c-table-body">
-           <tr class="c-table-row is-selected">
-               <td class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet</td>
-               <td class="c-table-cell" style="width:25%">lorem</td>
-               <td class="c-table-cell" style="width:25%">ipsum</td>
-           </tr>
-           <tr class="c-table-row">
-               <td class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</td>
-               <td class="c-table-cell" style="width:25%">corporis</td>
-               <td class="c-table-cell" style="width:25%">placeat</td>
-           </tr>
-           <tr class="c-table-divider">
-               <td colspan="3">Divider</td>
-           </tr>
-           <tr class="c-table-row">
-               <td class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</td>
-               <td class="c-table-cell" style="width:25%">corporis</td>
-               <td class="c-table-cell" style="width:25%">placeat</td>
-           </tr>
-       </tbody>
-   </table>
    <h2>Table with div element</h2>
    <div class="c-table">
        <div class="c-table-head">
@@ -151,7 +123,7 @@
            <div class="c-table-row is-selected">
                <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet</div>
                <div class="c-table-cell" style="width:25%">lorem</div>
-               <div class="c-table-cell" style="width:25%">ipsum</div>
+               <div class="c-table-cell c-table-ellipsis" style="width:25%">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
            </div>
            <div class="c-table-row">
                <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
@@ -172,36 +144,6 @@
 
                 <article class="kss-section__markup">
                   <pre><code class="language-markup">&lt;div&gt;
-   &lt;h2&gt;Table with table element&lt;/h2&gt;
-   &lt;table class&#x3D;&quot;c-table&quot;&gt;
-       &lt;thead class&#x3D;&quot;c-table-head&quot;&gt;
-           &lt;tr class&#x3D;&quot;c-table-row-head&quot;&gt;
-               &lt;th class&#x3D;&quot;c-table-header&quot; style&#x3D;&quot;width:50%&quot;&gt;Header 1&lt;/th&gt;
-               &lt;th class&#x3D;&quot;c-table-header&quot; style&#x3D;&quot;width:25%&quot;&gt;Header 2&lt;/th&gt;
-               &lt;th class&#x3D;&quot;c-table-header&quot; style&#x3D;&quot;width:25%&quot;&gt;Header 3&lt;/th&gt;
-           &lt;/tr&gt;
-       &lt;/thead&gt;
-       &lt;tbody class&#x3D;&quot;c-table-body&quot;&gt;
-           &lt;tr class&#x3D;&quot;c-table-row is-selected&quot;&gt;
-               &lt;td class&#x3D;&quot;c-table-cell c-table-cell--primary&quot; style&#x3D;&quot;width:50%&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
-               &lt;td class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;lorem&lt;/td&gt;
-               &lt;td class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;ipsum&lt;/td&gt;
-           &lt;/tr&gt;
-           &lt;tr class&#x3D;&quot;c-table-row&quot;&gt;
-               &lt;td class&#x3D;&quot;c-table-cell c-table-cell--primary&quot; style&#x3D;&quot;width:50%&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam&lt;/td&gt;
-               &lt;td class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;corporis&lt;/td&gt;
-               &lt;td class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;placeat&lt;/td&gt;
-           &lt;/tr&gt;
-           &lt;tr class&#x3D;&quot;c-table-divider&quot;&gt;
-               &lt;td colspan&#x3D;&quot;3&quot;&gt;Divider&lt;/td&gt;
-           &lt;/tr&gt;
-           &lt;tr class&#x3D;&quot;c-table-row&quot;&gt;
-               &lt;td class&#x3D;&quot;c-table-cell c-table-cell--primary&quot; style&#x3D;&quot;width:50%&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam&lt;/td&gt;
-               &lt;td class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;corporis&lt;/td&gt;
-               &lt;td class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;placeat&lt;/td&gt;
-           &lt;/tr&gt;
-       &lt;/tbody&gt;
-   &lt;/table&gt;
    &lt;h2&gt;Table with div element&lt;/h2&gt;
    &lt;div class&#x3D;&quot;c-table&quot;&gt;
        &lt;div class&#x3D;&quot;c-table-head&quot;&gt;
@@ -215,7 +157,7 @@
            &lt;div class&#x3D;&quot;c-table-row is-selected&quot;&gt;
                &lt;div class&#x3D;&quot;c-table-cell c-table-cell--primary&quot; style&#x3D;&quot;width:50%&quot;&gt;Lorem ipsum dolor sit amet&lt;/div&gt;
                &lt;div class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;lorem&lt;/div&gt;
-               &lt;div class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;ipsum&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-cell c-table-ellipsis&quot; style&#x3D;&quot;width:25%&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/div&gt;
            &lt;/div&gt;
            &lt;div class&#x3D;&quot;c-table-row&quot;&gt;
                &lt;div class&#x3D;&quot;c-table-cell c-table-cell--primary&quot; style&#x3D;&quot;width:50%&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam&lt;/div&gt;
