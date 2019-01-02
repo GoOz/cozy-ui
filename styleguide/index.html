@@ -82,19 +82,22 @@
     <!-- documentation. -->
     <section class="kss-documentation">
         <article class="kss-markdown">
-          <h1 id="css-guidelines">CSS Guidelines</h1>
+          <h1>CSS Guidelines</h1>
 <p>Based on <a href="http://guidelin.es">Guidelin.es</a></p>
-<h2 id="syntax-formatting">Syntax &amp; Formatting</h2>
+<h2>Syntax &amp; Formatting</h2>
 <p>A few basic rules for syntax and formatting. A <em>linter</em> and a <em>.editorconfig</em> file are keeping a eye on the produced CSS to make sure it respects most of those rules but you should know them nevertheless.</p>
 <ul>
-<li><strong>Indentation must be done with 4 spaces</strong><br><em>As defined in .editorconfig file</em></li>
+<li><strong>Indentation must be done with 4 spaces</strong><br>
+<em>As defined in .editorconfig file</em></li>
 <li><strong>2 blank lines between root levels</strong></li>
 <li><strong>1 blank line between nested ruleset</strong></li>
 <li><strong>Nesting must not exceed 3 levels</strong> <em>(except pseudo-classes styles)</em></li>
 <li><strong>Don’t use {}, : and ;</strong> <em>as they are optionnal in Stylus</em></li>
-<li><strong>80 character wide columns</strong><br><em>Defined in the .editorconfig file but only supported by a few editors (Emacs, Vim, Atom, ReSharper and Rider)</em></li>
+<li><strong>80 character wide columns</strong><br>
+<em>Defined in the .editorconfig file but only supported by a few editors (Emacs, Vim, Atom, ReSharper and Rider)</em></li>
 <li><strong>Multi-line CSS</strong> <em>(exception for one-declaration ruleset)</em></li>
-<li><strong>Declaration’s anatomy</strong><ul>
+<li><strong>Declaration’s anatomy</strong>
+<ul>
 <li><em>additional selectors on new lines</em></li>
 <li><em>properties and values on the same line</em></li>
 <li><em>each declaration on its own new line</em></li>
@@ -105,7 +108,7 @@
 </li>
 <li><strong>Declaration order should go from positioning to typography,</strong> <em>such as :</em></li>
 </ul>
-<pre><code>div
+<pre class="hljs"><code class="language-">div
     // Positionning
     z-index  5
     position absolute
@@ -131,17 +134,18 @@
     font-family MavenPro
     font-size   1rem
     line-height 1.5em
-</code></pre><h2 id="commenting">Commenting</h2>
-<p>There&#39;s several type of comment available to you.</p>
-<h3 id="block-comments-for-sectioning">Block Comments for sectioning</h3>
-<pre><code class="lang-css">/*------------------------------------*\
+</code></pre>
+<h2>Commenting</h2>
+<p>There's several type of comment available to you.</p>
+<h3>Block Comments for sectioning</h3>
+<pre class="hljs"><code class="language-css"><span class="hljs-comment">/*------------------------------------*\
   #SECTION-TITLE
-\*------------------------------------*/
+\*------------------------------------*/</span>
 </code></pre>
 <p>To be used on top a file and/or to section a long file.</p>
-<h3 id="note-comment">Note Comment</h3>
+<h3>Note Comment</h3>
 <p>When you have several comments to do on a chunk of tricky code it may be better to Note Comments</p>
-<pre><code>$sprite-width:  920px;
+<pre class="hljs"><code class="language-">$sprite-width:  920px;
 $sprite-height: 212px;
 
 /**
@@ -154,18 +158,20 @@ $sprite-height: 212px;
   background-image: url(/img/sprites/main.png);
   background-size: ($sprite-width / 2 ) ($sprite-height / 2); /* [2] */
 }
-</code></pre><h3 id="basic-comments">Basic comments</h3>
+</code></pre>
+<h3>Basic comments</h3>
 <p>As we use Stylus as preprocessor, I recommend the use of <code>//</code> for inline but CSS syntax is tolerated.</p>
-<pre><code>// Basic button
+<pre class="hljs"><code class="language-">// Basic button
 .btn
   display    inline-block
   background black
   color      white
-</code></pre><p>You should always comment what you code, especially when what you coded isn&#39;t obvious, and nothing is obvious.</p>
-<h3 id="kss-comments">KSS Comments</h3>
+</code></pre>
+<p>You should always comment what you code, especially when what you coded isn't obvious, and nothing is obvious.</p>
+<h3>KSS Comments</h3>
 <p>In order to populate the styleguide you need to use specific comments, KSS comments.
 It basically, very basically, looks like that.</p>
-<pre><code>// Title
+<pre class="hljs"><code class="language-">// Title
 //
 // Description
 //
@@ -175,18 +181,20 @@ It basically, very basically, looks like that.</p>
 // modifier_class - class description
 //
 // Reference
-</code></pre><p>Please follow the <a href="https://github.com/kss-node/kss/blob/spec/SPEC.md">KSS specs</a> for more details.</p>
-<h2 id="naming-conventions">Naming Conventions</h2>
+</code></pre>
+<p>Please follow the <a href="https://github.com/kss-node/kss/blob/spec/SPEC.md">KSS specs</a> for more details.</p>
+<h2>Naming Conventions</h2>
 <ul>
 <li><strong>Classes should always written in lowercase</strong></li>
 <li><strong>All strings in classes are delimited with a hyphen (-)</strong></li>
 </ul>
 <p>We use <a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md">SuitCSS naming convention</a> which in kinda like BEM but with a slightly different syntax.</p>
-<h2 id="selectors">Selectors</h2>
+<h2>Selectors</h2>
 <ul>
 <li><strong>Don’t target HTML element,</strong> <em>especially if it’s a component of the UI</em></li>
 <li><strong>Don’t use qualified selectors <code>input.btn</code> or <code>ul.list</code></strong> <em>so the style can be reused</em></li>
-<li><strong>Don’t use key selector <code>*</code>, ever.</strong><br><em>Only possible exception is to use it in order to normalise elements, and even so, it may not be the right approach.</em></li>
+<li><strong>Don’t use key selector <code>*</code>, ever.</strong><br>
+<em>Only possible exception is to use it in order to normalise elements, and even so, it may not be the right approach.</em></li>
 </ul>
 <p>Basically:</p>
 <ul>
@@ -196,21 +204,24 @@ It basically, very basically, looks like that.</p>
 <li><em>Do not qualify selectors unnecessarily, as this will impact the number of different elements you can apply styles to.</em></li>
 <li><em>Keep selectors as short as possible, in order to keep specificity down and performance up.</em></li>
 </ul>
-<h2 id="specificity">Specificity</h2>
+<h2>Specificity</h2>
 <ul>
 <li><strong>Never, ever, use #IDs</strong></li>
-<li><strong>Don&#39;t nest selectors unnecessarily</strong><br><em>As a rule, if a selector will work without it being nested then do not nest it.</em></li>
-<li><strong>Prefer a good naming convention for scoping than nesting selectors</strong><br><em>If not possible, only use nested selectors for scoping then.</em></li>
+<li><strong>Don't nest selectors unnecessarily</strong><br>
+<em>As a rule, if a selector will work without it being nested then do not nest it.</em></li>
+<li><strong>Prefer a good naming convention for scoping than nesting selectors</strong><br>
+<em>If not possible, only use nested selectors for scoping then.</em></li>
 <li><strong>Do not use <code>!important</code>, ever.</strong>
 <em>In many cases, the only possible use for <code>!important</code> is in utility classes but that’s pretty much it. If you feel you need it somewhere then you probably did something wrong elsewhere and you probably need a better scoping.</em></li>
 <li><strong>Avoid double classes <code>.foo.bar</code></strong> <em>as much as possible as it increases the specificity, most if the time for nothing.</em></li>
 </ul>
-<h2 id="principles">Principles</h2>
-<h3 id="the-open-closed-principle">The Open/Closed Principle</h3>
+<h2>Principles</h2>
+<h3>The Open/Closed Principle</h3>
 <p><strong>The open/closed principle states that classes should be open for extension, but closed for modification.</strong></p>
-<p>The idea here is to get an easily evolutive CSS while keeping a certain level of backward compatibility.<br>Further reading:  <a href="http://csswizardry.com/2012/06/the-open-closed-principle-applied-to-css/">http://csswizardry.com/2012/06/the-open-closed-principle-applied-to-css/</a></p>
-<h3 id="the-dry-method">The DRY method</h3>
-<p><strong>Don&#39;t Repeat Yourself!</strong>
+<p>The idea here is to get an easily evolutive CSS while keeping a certain level of backward compatibility.<br>
+Further reading:  <a href="http://csswizardry.com/2012/06/the-open-closed-principle-applied-to-css/">http://csswizardry.com/2012/06/the-open-closed-principle-applied-to-css/</a></p>
+<h3>The DRY method</h3>
+<p><strong>Don't Repeat Yourself!</strong>
 Use <code>@extend</code> as much as possible to keep your code clean but do it well and smartly.</p>
 
         </article>

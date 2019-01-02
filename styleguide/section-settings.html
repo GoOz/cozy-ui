@@ -320,7 +320,7 @@ to set it to <code>min</code>.</p>
               </a>
 
                 <div class="kss-section__description"><p>tiny-screen() Refers to (max-width: 543px)
-tiny-screen(&#39;min&#39;) Refers to (min-width: 544px)</p>
+tiny-screen('min') Refers to (min-width: 544px)</p>
 </div>
 
             </article>
@@ -339,7 +339,7 @@ tiny-screen(&#39;min&#39;) Refers to (min-width: 544px)</p>
               </a>
 
                 <div class="kss-section__description"><p>small-screen() Refers to (max-width: 768px)
-small-screen(&#39;min&#39;) Refers to (min-width: 769px)</p>
+small-screen('min') Refers to (min-width: 769px)</p>
 </div>
 
             </article>
@@ -358,7 +358,7 @@ small-screen(&#39;min&#39;) Refers to (min-width: 769px)</p>
               </a>
 
                 <div class="kss-section__description"><p>medium-screen() Refers to (max-width: 1023px)
-medium-screen(&#39;min&#39;) Refers to (min-width: 1024px)</p>
+medium-screen('min') Refers to (min-width: 1024px)</p>
 </div>
 
             </article>
@@ -377,7 +377,7 @@ medium-screen(&#39;min&#39;) Refers to (min-width: 1024px)</p>
               </a>
 
                 <div class="kss-section__description"><p>large-screen() Refers to (max-width: 1200px)
-large-screen(&#39;min&#39;) Refers to (min-width: 1201px)</p>
+large-screen('min') Refers to (min-width: 1201px)</p>
 </div>
 
             </article>
@@ -396,7 +396,7 @@ large-screen(&#39;min&#39;) Refers to (min-width: 1201px)</p>
               </a>
 
                 <div class="kss-section__description"><p>extra-large-screen() Refers to (max-width: 1439px)
-extra-large-screen(&#39;min&#39;) Refers to (min-width: 1440px)</p>
+extra-large-screen('min') Refers to (min-width: 1440px)</p>
 </div>
 
             </article>
@@ -769,6 +769,12 @@ extra-large-screen(&#39;min&#39;) Refers to (min-width: 1440px)</p>
                       #B449E7, CSS: var(--lightishPurple)
                     </div>
                   </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: barney</code></div>
+                    <div class="kss-parameters__description">
+                      #922BC2, CSS: var(--barney)
+                    </div>
+                  </li>
                 </ul>
             </article>
 
@@ -828,7 +834,7 @@ extra-large-screen(&#39;min&#39;) Refers to (min-width: 1440px)</p>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>There&#39;s only one font available, Lato, which is used on body, so basically everywhere. It&#39;s also available in bold.</p>
+                <div class="kss-section__description"><p>There's only one font available, Lato, which is used on body, so basically everywhere. It's also available in bold.</p>
 </div>
 
             </article>
@@ -1032,6 +1038,12 @@ is 16px (which is the default size in Cozy-UI)</p>
                     <div class="kss-parameters__name"><code>$app-index</code></div>
                     <div class="kss-parameters__description">
                       <strong>index 0</strong> App index, the ground zero.
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>$low-index</code></div>
+                    <div class="kss-parameters__description">
+                      <strong>index 1</strong> Low level index, to make sure a positionned element goes over elements with z-index 0.
                     </div>
                   </li>
                   <li class="kss-parameters__item">
