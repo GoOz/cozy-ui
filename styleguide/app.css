@@ -919,6 +919,7 @@ body {
   vertical-align: top;
   text-align: center;
   font-size: 0.875rem;
+  font-weight: bold;
   line-height: 1;
   text-transform: uppercase;
   text-decoration: none;
@@ -1434,6 +1435,11 @@ body {
 .c-btn--subtle.c-btn--secondary:active,
 .c-btn--subtle.c-btn--secondary:focus,
 .c-btn--subtle.c-btn--secondary:hover {
+  color: var(--charcoalGrey);
+}
+.c-btn--subtle.c-btn--secondary:active svg,
+.c-btn--subtle.c-btn--secondary:focus svg,
+.c-btn--subtle.c-btn--secondary:hover svg {
   color: var(--slateGrey);
 }
 .c-btn--subtle.c-btn--secondary svg {
@@ -1608,14 +1614,12 @@ body {
   content: '';
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 0.188rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 1rem;
   height: 1rem;
   border-radius: 0.125rem;
-  -webkit-transform: translateY(-53%);
-          transform: translateY(-53%);
 }
 .c-input-checkbox span::before,
 .c-input-radio span::before {
@@ -1661,8 +1665,8 @@ body {
 .c-input-checkbox input:checked + span::after,
 .c-input-radio input:checked + span::after {
   opacity: 1;
-  -webkit-transform: scale(1) translateY(-53%);
-          transform: scale(1) translateY(-53%);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .c-input-checkbox input:not(:checked) + span::after,
 .c-input-radio input:not(:checked) + span::after {
@@ -2958,6 +2962,12 @@ table.c-table td.c-table-ellipsis > div > div {
           justify-content: center;
   height: 100%;
   max-width: 64.5rem;
+}
+@media (min-width: 34rem) {
+  .wizard-wrapper--bleed,
+  .wizard-wrapper--dual {
+    height: 100%;
+  }
 }
 .wizard-wrapper--dual {
   max-width: none;
