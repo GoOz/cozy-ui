@@ -5584,7 +5584,7 @@ body {
 }
 @media (max-width: 48rem) {
   .c-modal-footer--button--1sIa4 button {
-    flex-basis: calc(50% - 0.5rem);
+    min-width: calc(50% - 0.5rem);
   }
 }
 .c-modal-section--2QNq3 {
