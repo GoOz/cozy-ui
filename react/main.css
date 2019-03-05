@@ -1023,6 +1023,10 @@ body {
 }
 @media (max-width: 33.938rem) {
 }
+@media (max-width: 33.938rem) {
+}
+@media (max-width: 33.938rem) {
+}
 @media (max-width: 48rem) {
 }
 @media (max-width: 48rem) {
@@ -3793,6 +3797,10 @@ body {
 }
 @media (max-width: 33.938rem) {
 }
+@media (max-width: 33.938rem) {
+}
+@media (max-width: 33.938rem) {
+}
 @media (max-width: 48rem) {
 }
 @media (max-width: 48rem) {
@@ -5530,6 +5538,27 @@ body {
 .c-modal-app-icon--3MjON {
   height: 1.125rem;
   margin-right: 0.5rem;
+}
+.c-modal-content-fixed--3wKzQ {
+  border-bottom: 0.063rem solid var(--silver);
+  flex: 0 0 auto;
+  padding: 0 2rem;
+}
+.c-modal--small-spacing--1foWa .c-modal-content-fixed--3wKzQ {
+  padding: 0 1.5rem;
+}
+@media (max-width: 33.938rem) {
+  .c-modal--small-spacing--1foWa .c-modal-content-fixed--3wKzQ {
+    padding: 0 1rem;
+  }
+}
+.c-modal--large-spacing--n2gNs .c-modal-content-fixed--3wKzQ {
+  padding: 0 3rem;
+}
+@media (max-width: 33.938rem) {
+  .c-modal--large-spacing--n2gNs .c-modal-content-fixed--3wKzQ {
+    padding: 0 2rem;
+  }
 }
 .c-modal-content--2av1P {
   padding: 0 2rem;
@@ -13860,6 +13889,7 @@ iframe {
   padding: 0.5rem;
 }
 .c-menu__item-icon--kzdkW {
+  margin-top: 0.125rem;
   margin-right: 0.75rem;
   margin-left: 0.25rem;
   font-size: 1.063rem;
