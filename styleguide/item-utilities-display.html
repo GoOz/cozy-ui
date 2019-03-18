@@ -93,12 +93,13 @@
 
               <a class="kss-section__permalink" href="#kssref-utilities-display">
                 <h2 class="kss-section__item kss-section__item--depth-2">
-                  <span class="kss-section__ref">4.3</span>
+                  <span class="kss-section__ref">4.7</span>
                   <span class="kss-section__name">Display</span>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Utilities that show or hide an element for a giving viewport size.</p>
+                <div class="kss-section__description"><p>Classes to change the box model of an element</p>
+<p>NB: <code>flex</code> being much more complex, it has its own set of utility classes, see further.</p>
 </div>
 
             </article>
@@ -108,37 +109,119 @@
 
                   <h2 class="kss-modifiers__name">Default styling</h2>
 
-                <div class="kss-modifiers__example"><p class="[modifier class]">I'm visible! 🎉</p></div>
+                <div class="kss-modifiers__example"><div class="[modifier class]" style="margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black;">
+    <span>Suspendisse mauris</span>
+    <span>Nulla ex aptent</span>
+    <span>Nullam praesent</span>
+</div></div>
 
-                  <h2 class="kss-modifiers__name">.u-visuallyhidden</h2>
+                  <h2 class="kss-modifiers__name">.u-dn</h2>
 
-                  <p class="kss-modifiers__description">Element is visually hidden but still readable by screen-readers</p>
+                  <p class="kss-modifiers__description">Display none</p>
 
-                  <div class="kss-modifiers__example"><p class="u-visuallyhidden">I'm visible! 🎉</p></div>
-                  <h2 class="kss-modifiers__name">.u-hide</h2>
+                  <div class="kss-modifiers__example"><div class="u-dn" style="margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black;">
+    <span>Suspendisse mauris</span>
+    <span>Nulla ex aptent</span>
+    <span>Nullam praesent</span>
+</div></div>
+                  <h2 class="kss-modifiers__name">.u-di</h2>
 
-                  <p class="kss-modifiers__description">Element is totally hidden (even for screen readers)</p>
+                  <p class="kss-modifiers__description">Display inline</p>
 
-                  <div class="kss-modifiers__example"><p class="u-hide">I'm visible! 🎉</p></div>
-                  <h2 class="kss-modifiers__name">.u-hide--desk</h2>
+                  <div class="kss-modifiers__example"><div class="u-di" style="margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black;">
+    <span>Suspendisse mauris</span>
+    <span>Nulla ex aptent</span>
+    <span>Nullam praesent</span>
+</div></div>
+                  <h2 class="kss-modifiers__name">.u-db</h2>
 
-                  <p class="kss-modifiers__description">Element is hidden on desktop (&gt;768px)</p>
+                  <p class="kss-modifiers__description">Display block</p>
 
-                  <div class="kss-modifiers__example"><p class="u-hide--desk">I'm visible! 🎉</p></div>
-                  <h2 class="kss-modifiers__name">.u-hide--tablet</h2>
+                  <div class="kss-modifiers__example"><div class="u-db" style="margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black;">
+    <span>Suspendisse mauris</span>
+    <span>Nulla ex aptent</span>
+    <span>Nullam praesent</span>
+</div></div>
+                  <h2 class="kss-modifiers__name">.u-dib</h2>
 
-                  <p class="kss-modifiers__description">Element is hidden on tablet (&gt;1024px)</p>
+                  <p class="kss-modifiers__description">Display inline-block</p>
 
-                  <div class="kss-modifiers__example"><p class="u-hide--tablet">I'm visible! 🎉</p></div>
-                  <h2 class="kss-modifiers__name">.u-hide--mob</h2>
+                  <div class="kss-modifiers__example"><div class="u-dib" style="margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black;">
+    <span>Suspendisse mauris</span>
+    <span>Nulla ex aptent</span>
+    <span>Nullam praesent</span>
+</div></div>
+                  <h2 class="kss-modifiers__name">.u-dit</h2>
 
-                  <p class="kss-modifiers__description">Element is hidden on mobile (&lt;1023px)</p>
+                  <p class="kss-modifiers__description">Display inline-table</p>
 
-                  <div class="kss-modifiers__example"><p class="u-hide--mob">I'm visible! 🎉</p></div>
+                  <div class="kss-modifiers__example"><div class="u-dit" style="margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black;">
+    <span>Suspendisse mauris</span>
+    <span>Nulla ex aptent</span>
+    <span>Nullam praesent</span>
+</div></div>
+                  <h2 class="kss-modifiers__name">.u-dt</h2>
+
+                  <p class="kss-modifiers__description">Display table</p>
+
+                  <div class="kss-modifiers__example"><div class="u-dt" style="margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black;">
+    <span>Suspendisse mauris</span>
+    <span>Nulla ex aptent</span>
+    <span>Nullam praesent</span>
+</div></div>
+                  <h2 class="kss-modifiers__name">.u-dtc</h2>
+
+                  <p class="kss-modifiers__description">Display table-cell</p>
+
+                  <div class="kss-modifiers__example"><div class="u-dtc" style="margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black;">
+    <span>Suspendisse mauris</span>
+    <span>Nulla ex aptent</span>
+    <span>Nullam praesent</span>
+</div></div>
+                  <h2 class="kss-modifiers__name">.u-dt-row</h2>
+
+                  <p class="kss-modifiers__description">Display table-row</p>
+
+                  <div class="kss-modifiers__example"><div class="u-dt-row" style="margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black;">
+    <span>Suspendisse mauris</span>
+    <span>Nulla ex aptent</span>
+    <span>Nullam praesent</span>
+</div></div>
+                  <h2 class="kss-modifiers__name">.u-dt-row-group</h2>
+
+                  <p class="kss-modifiers__description">Display table-row-group</p>
+
+                  <div class="kss-modifiers__example"><div class="u-dt-row-group" style="margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black;">
+    <span>Suspendisse mauris</span>
+    <span>Nulla ex aptent</span>
+    <span>Nullam praesent</span>
+</div></div>
+                  <h2 class="kss-modifiers__name">.u-dt-column</h2>
+
+                  <p class="kss-modifiers__description">Display table-column</p>
+
+                  <div class="kss-modifiers__example"><div class="u-dt-column" style="margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black;">
+    <span>Suspendisse mauris</span>
+    <span>Nulla ex aptent</span>
+    <span>Nullam praesent</span>
+</div></div>
+                  <h2 class="kss-modifiers__name">.u-dt-column-group</h2>
+
+                  <p class="kss-modifiers__description">Display table-column-group</p>
+
+                  <div class="kss-modifiers__example"><div class="u-dt-column-group" style="margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black;">
+    <span>Suspendisse mauris</span>
+    <span>Nulla ex aptent</span>
+    <span>Nullam praesent</span>
+</div></div>
               </article>
 
                 <article class="kss-section__markup">
-                  <pre><code class="language-markup">&lt;p class&#x3D;&quot;[modifier class]&quot;&gt;I&#x27;m visible! 🎉&lt;/p&gt;</code></pre>
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;[modifier class]&quot; style&#x3D;&quot;margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black;&quot;&gt;
+    &lt;span&gt;Suspendisse mauris&lt;/span&gt;
+    &lt;span&gt;Nulla ex aptent&lt;/span&gt;
+    &lt;span&gt;Nullam praesent&lt;/span&gt;
+&lt;/div&gt;</code></pre>
                 </article>
 
             </header>
