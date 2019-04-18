@@ -2083,33 +2083,33 @@ body {
 .c-label.is-error {
   color: var(--pomegranate);
 }
-.c-input-text[aria-disabled],
+.c-input-text[aria-disabled=true],
 .c-input-text[disabled],
-.c-textarea[aria-disabled],
+.c-textarea[aria-disabled=true],
 .c-textarea[disabled],
-.c-select[aria-disabled],
+.c-select[aria-disabled=true],
 .c-select[disabled],
-.wizard-select[aria-disabled],
+.wizard-select[aria-disabled=true],
 .wizard-select[disabled] {
   cursor: not-allowed;
   background-color: var(--paleGrey);
   color: var(--charcoalGrey);
 }
-.c-input-text[aria-disabled]:hover,
+.c-input-text[aria-disabled=true]:hover,
 .c-input-text[disabled]:hover,
-.c-textarea[aria-disabled]:hover,
+.c-textarea[aria-disabled=true]:hover,
 .c-textarea[disabled]:hover,
-.c-select[aria-disabled]:hover,
+.c-select[aria-disabled=true]:hover,
 .c-select[disabled]:hover,
-.wizard-select[aria-disabled]:hover,
+.wizard-select[aria-disabled=true]:hover,
 .wizard-select[disabled]:hover,
-.c-input-text[aria-disabled]:focus,
+.c-input-text[aria-disabled=true]:focus,
 .c-input-text[disabled]:focus,
-.c-textarea[aria-disabled]:focus,
+.c-textarea[aria-disabled=true]:focus,
 .c-textarea[disabled]:focus,
-.c-select[aria-disabled]:focus,
+.c-select[aria-disabled=true]:focus,
 .c-select[disabled]:focus,
-.wizard-select[aria-disabled]:focus,
+.wizard-select[aria-disabled=true]:focus,
 .wizard-select[disabled]:focus {
   border: 0.063rem solid var(--silver);
 }
@@ -2257,18 +2257,18 @@ body {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj48cGF0aCBkPSJNMy40OTcgMTBoMTMuMDA2IiBzdHJva2U9IiNGRkYiIHN0cm9rZS13aWR0aD0iMiIgLz48L3N2Zz4K");
   background-size: contain;
 }
-.c-input-checkbox[aria-disabled] span,
-.c-input-radio[aria-disabled] span {
+.c-input-checkbox[aria-disabled=true] span,
+.c-input-radio[aria-disabled=true] span {
   opacity: 0.5;
   cursor: not-allowed;
 }
-.c-input-checkbox[aria-disabled] :hover::before,
-.c-input-radio[aria-disabled] :hover::before {
+.c-input-checkbox[aria-disabled=true] :hover::before,
+.c-input-radio[aria-disabled=true] :hover::before {
   -webkit-box-shadow: inset 0 0 0 0.125rem var(--silver);
           box-shadow: inset 0 0 0 0.125rem var(--silver);
 }
-.c-input-checkbox[aria-disabled] ::before,
-.c-input-radio[aria-disabled] ::before {
+.c-input-checkbox[aria-disabled=true] ::before,
+.c-input-radio[aria-disabled=true] ::before {
   background-color: var(--paleGrey);
 }
 .c-input-checkbox input,
@@ -8044,6 +8044,39 @@ table.c-table td.c-table-ellipsis > div > div {
 .u-bg-primaryContrastTextColor {
   background-color: var(--primaryContrastTextColor) !important;
 }
+.u-bdrs-0 {
+  border-radius: 0;
+}
+@media (max-width: 23.438rem) {
+  .u-bdrs-0-tt {
+    border-radius: 0;
+  }
+}
+@media (max-width: 33.938rem) {
+  .u-bdrs-0-t {
+    border-radius: 0;
+  }
+}
+@media (max-width: 48rem) {
+  .u-bdrs-0-s {
+    border-radius: 0;
+  }
+}
+@media (max-width: 63.938rem) {
+  .u-bdrs-0-m {
+    border-radius: 0;
+  }
+}
+@media (max-width: 75rem) {
+  .u-bdrs-0-l {
+    border-radius: 0;
+  }
+}
+@media (max-width: 89.938rem) {
+  .u-bdrs-0-xl {
+    border-radius: 0;
+  }
+}
 .u-bdrs-1 {
   border-radius: 0.125rem;
 }
@@ -13567,6 +13600,7 @@ Display an chip that represents complex identity
 
     Border-radius
 
+    .u-bdrs-0 - Cancel border-radius (0)
     .u-bdrs-1 - 1st step of border-radius (2px)
     .u-bdrs-2 - 2nd step of border-radius (3px)
     .u-bdrs-3 - 3rd step of border-radius (4px)
