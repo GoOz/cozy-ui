@@ -1445,6 +1445,72 @@ body {
     text-align: justify !important;
   }
 }
+.u-fs-normal {
+  font-style: normal !important;
+}
+@media (max-width: 23.438rem) {
+  .u-fs-normal-tt {
+    font-style: normal !important;
+  }
+}
+@media (max-width: 33.938rem) {
+  .u-fs-normal-t {
+    font-style: normal !important;
+  }
+}
+@media (max-width: 48rem) {
+  .u-fs-normal-s {
+    font-style: normal !important;
+  }
+}
+@media (max-width: 63.938rem) {
+  .u-fs-normal-m {
+    font-style: normal !important;
+  }
+}
+@media (max-width: 75rem) {
+  .u-fs-normal-l {
+    font-style: normal !important;
+  }
+}
+@media (max-width: 89.938rem) {
+  .u-fs-normal-xl {
+    font-style: normal !important;
+  }
+}
+.u-fs-italic {
+  font-style: italic !important;
+}
+@media (max-width: 23.438rem) {
+  .u-fs-italic-tt {
+    font-style: italic !important;
+  }
+}
+@media (max-width: 33.938rem) {
+  .u-fs-italic-t {
+    font-style: italic !important;
+  }
+}
+@media (max-width: 48rem) {
+  .u-fs-italic-s {
+    font-style: italic !important;
+  }
+}
+@media (max-width: 63.938rem) {
+  .u-fs-italic-m {
+    font-style: italic !important;
+  }
+}
+@media (max-width: 75rem) {
+  .u-fs-italic-l {
+    font-style: italic !important;
+  }
+}
+@media (max-width: 89.938rem) {
+  .u-fs-italic-xl {
+    font-style: italic !important;
+  }
+}
 .c-btn,
 .c-btn--regular,
 .c-btn-client,
@@ -2736,6 +2802,8 @@ body {
 @media (max-width: 48rem) {
 }
 @media (max-width: 33.938rem) {
+}
+@media (max-width: 25rem) {
 }
 @media (max-width: 35rem) {
 }
@@ -8044,39 +8112,6 @@ table.c-table td.c-table-ellipsis > div > div {
 .u-bg-primaryContrastTextColor {
   background-color: var(--primaryContrastTextColor) !important;
 }
-.u-bdrs-0 {
-  border-radius: 0;
-}
-@media (max-width: 23.438rem) {
-  .u-bdrs-0-tt {
-    border-radius: 0;
-  }
-}
-@media (max-width: 33.938rem) {
-  .u-bdrs-0-t {
-    border-radius: 0;
-  }
-}
-@media (max-width: 48rem) {
-  .u-bdrs-0-s {
-    border-radius: 0;
-  }
-}
-@media (max-width: 63.938rem) {
-  .u-bdrs-0-m {
-    border-radius: 0;
-  }
-}
-@media (max-width: 75rem) {
-  .u-bdrs-0-l {
-    border-radius: 0;
-  }
-}
-@media (max-width: 89.938rem) {
-  .u-bdrs-0-xl {
-    border-radius: 0;
-  }
-}
 .u-bdrs-1 {
   border-radius: 0.125rem;
 }
@@ -8241,6 +8276,10 @@ table.c-table td.c-table-ellipsis > div > div {
   .u-bdrs-circle-xl {
     border-radius: 100%;
   }
+}
+.u-bxz {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .u-c-default {
   cursor: default;
@@ -10926,16 +10965,12 @@ table.c-table td.c-table-ellipsis > div > div {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  min-width: 0 /* 1 */;
-  min-height: 0 /* 1 */;
 }
 @media (max-width: 23.438rem) {
   .u-flex-auto-tt {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
-    min-width: 0 /* 1 */;
-    min-height: 0 /* 1 */;
   }
 }
 @media (max-width: 33.938rem) {
@@ -10943,8 +10978,6 @@ table.c-table td.c-table-ellipsis > div > div {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
-    min-width: 0 /* 1 */;
-    min-height: 0 /* 1 */;
   }
 }
 @media (max-width: 48rem) {
@@ -10952,8 +10985,6 @@ table.c-table td.c-table-ellipsis > div > div {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
-    min-width: 0 /* 1 */;
-    min-height: 0 /* 1 */;
   }
 }
 @media (max-width: 63.938rem) {
@@ -10961,8 +10992,6 @@ table.c-table td.c-table-ellipsis > div > div {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
-    min-width: 0 /* 1 */;
-    min-height: 0 /* 1 */;
   }
 }
 @media (max-width: 75rem) {
@@ -10970,8 +10999,6 @@ table.c-table td.c-table-ellipsis > div > div {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
-    min-width: 0 /* 1 */;
-    min-height: 0 /* 1 */;
   }
 }
 @media (max-width: 89.938rem) {
@@ -10979,8 +11006,6 @@ table.c-table td.c-table-ellipsis > div > div {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
-    min-width: 0 /* 1 */;
-    min-height: 0 /* 1 */;
   }
 }
 .u-flex-items-start {
@@ -12602,6 +12627,22 @@ table.c-table td.c-table-ellipsis > div > div {
 .u-o-0 {
   opacity: 0;
 }
+.u-pos-absolute {
+  position: absolute;
+}
+.u-pos-relative {
+  position: relative;
+}
+.u-pos-fixed {
+  position: fixed;
+}
+.u-pos-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+.u-pos-static {
+  position: static;
+}
 /*------------------------------------*  Objects
 \*------------------------------------*/
 /*------------------------------------*  Components
@@ -13297,6 +13338,21 @@ Display an chip that represents complex identity
  Styleguide utilities.text.fontsize
 */
 /*
+ Font-style
+
+ Sets a font-style to a text
+
+ Markup:
+ <p class="{{modifier_class}}">Facilisis eget nam turpis id adipiscing facilisi odio ut fames, aliquet laoreet felis habitasse tincidunt litora leo senectus.</p>
+
+ .u-fs-normal - Sets a normal font style
+ .u-fs-italic - Sets an italic font style
+
+ Weight: 7
+
+ Styleguide utilities.text.fontstyle
+*/
+/*
  Text alignement
 
  Sets a text alignement to a text
@@ -13309,7 +13365,7 @@ Display an chip that represents complex identity
  .u-ta-center - Sets a center alignment
  .u-ta-justify - Sets a justify alignment
 
- Weight: 7
+ Weight: 8
 
  Styleguide utilities.text.alignment
 */
@@ -13324,7 +13380,7 @@ Display an chip that represents complex identity
 
  .u-ellipsis - Ellipsis at the end
 
- Weight: 8
+ Weight: 9
 
  Styleguide utilities.text.ellipsis
 */
@@ -13340,7 +13396,7 @@ Display an chip that represents complex identity
 
  .u-midellipsis - Ellipsis in the middle
 
- Weight: 9
+ Weight: 10
 
  Styleguide utilities.text.midellipsis
 */
@@ -13600,7 +13656,6 @@ Display an chip that represents complex identity
 
     Border-radius
 
-    .u-bdrs-0 - Cancel border-radius (0)
     .u-bdrs-1 - 1st step of border-radius (2px)
     .u-bdrs-2 - 2nd step of border-radius (3px)
     .u-bdrs-3 - 3rd step of border-radius (4px)
@@ -13613,6 +13668,18 @@ Display an chip that represents complex identity
     Weight: 1
 
     Styleguide utilities.border
+*/
+/*
+    Box-sizing
+
+    .u-bxz - Sets the box-sizing of an element to `border-box`
+
+    Markup:
+    <div class="{{modifier_class}} u-w-4 u-p-1 u-bg-silver"></div>
+
+    Weight: 1
+
+    Styleguide utilities.boxsizing
 */
 /*
     Display
@@ -13643,6 +13710,26 @@ Display an chip that represents complex identity
     Weight: 1
 
     Styleguide utilities.display
+*/
+/*
+    Position
+
+    Classes to change the position of an element
+
+    .u-pos-absolute - Absolute position
+    .u-pos-relative - Relative position
+    .u-pos-fixed - Fixed position (relative to the viewport)
+    .u-pos-sticky - Sticky position
+    .u-pos-static - Static position
+
+    Markup:
+    <div style="position: relative; margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black;">
+        <div class="{{modifier_class}}" style="background-color:green;">Nulla ex aptent</div>
+    </div>
+
+    Weight: 1
+
+    Styleguide utilities.position
 */
 /*
     Flexbox display
