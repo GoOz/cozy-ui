@@ -9941,17 +9941,167 @@ body {
 .u-pos-absolute {
   position: absolute;
 }
+@media (max-width: 23.438rem) {
+  .u-pos-absolute-tt {
+    position: absolute;
+  }
+}
+@media (max-width: 33.938rem) {
+  .u-pos-absolute-t {
+    position: absolute;
+  }
+}
+@media (max-width: 48rem) {
+  .u-pos-absolute-s {
+    position: absolute;
+  }
+}
+@media (max-width: 63.938rem) {
+  .u-pos-absolute-m {
+    position: absolute;
+  }
+}
+@media (max-width: 75rem) {
+  .u-pos-absolute-l {
+    position: absolute;
+  }
+}
+@media (max-width: 89.938rem) {
+  .u-pos-absolute-xl {
+    position: absolute;
+  }
+}
 .u-pos-relative {
   position: relative;
+}
+@media (max-width: 23.438rem) {
+  .u-pos-relative-tt {
+    position: relative;
+  }
+}
+@media (max-width: 33.938rem) {
+  .u-pos-relative-t {
+    position: relative;
+  }
+}
+@media (max-width: 48rem) {
+  .u-pos-relative-s {
+    position: relative;
+  }
+}
+@media (max-width: 63.938rem) {
+  .u-pos-relative-m {
+    position: relative;
+  }
+}
+@media (max-width: 75rem) {
+  .u-pos-relative-l {
+    position: relative;
+  }
+}
+@media (max-width: 89.938rem) {
+  .u-pos-relative-xl {
+    position: relative;
+  }
 }
 .u-pos-fixed {
   position: fixed;
 }
+@media (max-width: 23.438rem) {
+  .u-pos-fixed-tt {
+    position: fixed;
+  }
+}
+@media (max-width: 33.938rem) {
+  .u-pos-fixed-t {
+    position: fixed;
+  }
+}
+@media (max-width: 48rem) {
+  .u-pos-fixed-s {
+    position: fixed;
+  }
+}
+@media (max-width: 63.938rem) {
+  .u-pos-fixed-m {
+    position: fixed;
+  }
+}
+@media (max-width: 75rem) {
+  .u-pos-fixed-l {
+    position: fixed;
+  }
+}
+@media (max-width: 89.938rem) {
+  .u-pos-fixed-xl {
+    position: fixed;
+  }
+}
 .u-pos-sticky {
   position: sticky;
 }
+@media (max-width: 23.438rem) {
+  .u-pos-sticky-tt {
+    position: sticky;
+  }
+}
+@media (max-width: 33.938rem) {
+  .u-pos-sticky-t {
+    position: sticky;
+  }
+}
+@media (max-width: 48rem) {
+  .u-pos-sticky-s {
+    position: sticky;
+  }
+}
+@media (max-width: 63.938rem) {
+  .u-pos-sticky-m {
+    position: sticky;
+  }
+}
+@media (max-width: 75rem) {
+  .u-pos-sticky-l {
+    position: sticky;
+  }
+}
+@media (max-width: 89.938rem) {
+  .u-pos-sticky-xl {
+    position: sticky;
+  }
+}
 .u-pos-static {
   position: static;
+}
+@media (max-width: 23.438rem) {
+  .u-pos-static-tt {
+    position: static;
+  }
+}
+@media (max-width: 33.938rem) {
+  .u-pos-static-t {
+    position: static;
+  }
+}
+@media (max-width: 48rem) {
+  .u-pos-static-s {
+    position: static;
+  }
+}
+@media (max-width: 63.938rem) {
+  .u-pos-static-m {
+    position: static;
+  }
+}
+@media (max-width: 75rem) {
+  .u-pos-static-l {
+    position: static;
+  }
+}
+@media (max-width: 89.938rem) {
+  .u-pos-static-xl {
+    position: static;
+  }
 }
 html,
 body {
@@ -9963,8 +10113,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: rem(48);
-  height: rem(48);
+  width: 3rem;
+  height: 3rem;
 }
 
 @-moz-keyframes spin--2Vvw3 {
@@ -17179,6 +17329,162 @@ body {
 }
 @media (max-width: 48rem) {
 }
+:root {
+/*
+    Grey
+
+    Stylus: white        -  #FFFFFF, CSS: var(--white)
+    Stylus: paleGrey     -  #F5F6F7, CSS: var(--paleGrey)
+    Stylus: silver       -  #D6D8Da, CSS: var(--silver)
+    Stylus: coolGrey     -  #95999D, CSS: var(--coolGrey)
+    Stylus: slateGrey    -  #5D6165, CSS: var(--slateGrey)
+    Stylus: charcoalGrey -  #32363F, CSS: var(--charcoalGrey)
+    Stylus: black        -  #000000, CSS: var(--black)
+
+    Weight: -1
+
+    Styleguide Settings.colors.grey
+    */
+  --white: #fff;
+  --paleGrey: #f5f6f7;
+  --silver: #d6d8da;
+  --coolGrey: #95999d;
+  --slateGrey: #5d6165;
+  --charcoalGrey: #32363f;
+  --black: #000;
+  --overlay: rgba(50,54,63,0.5);
+/*
+    Blue
+
+    Stylus: zircon       -  #F5FAFF, CSS: var(--zircon)
+    Stylus: frenchPass   -  #C2DCFF, CSS: var(--frenchPass)
+    Stylus: azure        -  #1FA8F1, CSS: var(--azure)
+    Stylus: dodgerBlue   -  #297EF2, CSS: var(--dodgerBlue)
+    Stylus: scienceBlue  -  #0B61D6, CSS: var(--scienceBlue)
+    Stylus: puertoRico   -  #0DCBCF, CSS: var(--puertoRico)
+
+    Styleguide Settings.colors.blue
+    */
+  --zircon: #f5faff;
+  --frenchPass: #c2dcff;
+  --azure: #1fa8f1;
+  --dodgerBlue: #297ef2;
+  --scienceBlue: #0b61d6;
+  --puertoRico: #0dcbcf;
+/*
+    Green
+
+    Stylus: grannyApple  - #DEF7E7, CSS: var(--grannyApple)
+    Stylus: weirdGreen   - #40DE8E, CSS: var(--weirdGreen)
+    Stylus: emerald      - #35CE68, CSS: var(--emerald)
+    Stylus: malachite    - #08b442, CSS: var(--malachite)
+    Stylus: seafoamGreen - #3DA67E, CSS: var(--seafoamGreen)
+
+    Styleguide Settings.colors.green
+    */
+  --grannyApple: #def7e7;
+  --weirdGreen: #40de8e;
+  --emerald: #35ce68;
+  --malachite: #08b442;
+  --seafoamGreen: #3da67e;
+/*
+    Orange
+
+    Stylus: brightSun     - #FFC644, CSS: var(--brightSun)
+    Stylus: texasRose     - #FFAE5F, CSS: var(--texasRose)
+    Stylus: mango         - #FF962F, CSS: var(--mango)
+    Stylus: pumpkinOrange - #FF7F1B, CSS: var(--pumpkinOrange)
+    Stylus: blazeOrange   - #FC6D00, CSS: var(--blazeOrange)
+    Stylus: melon         - #FD7461, CSS: var(--melon)
+
+    Styleguide Settings.colors.orange
+    */
+  --brightSun: #ffc644;
+  --texasRose: #ffae5f;
+  --mango: #ff962f;
+  --pumpkinOrange: #ff7f1b;
+  --blazeOrange: #fc6d00;
+  --melon: #fd7461;
+/*
+    Red
+
+    Stylus: chablis      - #FFF2F2, CSS: var(--chablis)
+    Stylus: yourPink     - #FDCBCB, CSS: var(--yourPink)
+    Stylus: fuchsia      - #FC4C83, CSS: var(--fuchsia)
+    Stylus: pomegranate  - #F52D2D, CSS: var(--pomegranate)
+    Stylus: monza        - #DD0505, CSS: var(--monza)
+
+    Styleguide Settings.colors.red
+    */
+  --chablis: #fff2f2;
+  --yourPink: #fdcbcb;
+  --fushsia: #fc4c83;
+  --pomegranate: #f52d2d;
+  --monza: #dd0505;
+/*
+    Purple
+
+    Stylus: lavender       - #C2ADF4, CSS: var(--lavender)
+    Stylus: darkPeriwinkle - #6984CE, CSS: var(--darkPeriwinkle)
+    Stylus: purpley        - #7F6BEE, CSS: var(--purpley)
+    Stylus: portage        - #9169F2, CSS: var(--portage)
+    Stylus: lightishPurple - #B449E7, CSS: var(--lightishPurple)
+    Stylus: barney         - #922BC2, CSS: var(--barney)
+
+    Styleguide Settings.colors.purple
+    */
+  --lavender: #c2adf4;
+  --darkPeriwinkle: #6984ce;
+  --purpley: #7f6bee;
+  --portage: #9169f2;
+  --lightishPurple: #b449e7;
+  --barney: #922bc2;
+/*
+        Theme
+
+        Colors theme used in the user interface. You can directly use the var name assiociated with its hexadecimal.
+
+        Styleguide Settings.theme
+    */
+/*
+    Primary
+
+    Stylus: primaryColor             - #297EF2, CSS: var(--primaryColor)
+    Stylus: primaryColorLight        - #5C9DF5, CSS: var(--primaryColorLight)
+    Stylus: primaryColorLighter      - #4B93F7, CSS: var(--primaryColorLighter)
+    Stylus: primaryColorLightest     - #9FC4FB, CSS: var(--primaryColorLightest)
+    Stylus: primaryContrastTextColor - #FFFFFF, CSS: var(--primaryContrastTextColor)
+
+    Styleguide Settings.theme.primary
+    */
+  --primaryColor: var(--dodgerBlue);
+  --primaryColorLight: #5c9df5;
+  --primaryColorLighter: #4b93f7;
+  --primaryColorLightest: #9fc4fb;
+  --primaryContrastTextColor: var(--white);
+}
+.c-input-checkbox--svg--3YMZN span::after {
+  display: none;
+}
+.c-input-checkbox-icon--7A-8k {
+  position: absolute;
+  left: 0;
+  top: 0.188rem;
+  box-sizing: border-box;
+  width: 1rem;
+  height: 1rem;
+  padding: 0.125rem;
+  transition-duration: 0.2s;
+  transition-property: opacity, transform;
+}
+.c-input-checkbox--2CzvY input:not(:checked) + span .c-input-checkbox-icon--7A-8k {
+  opacity: 0;
+  transform: scale(0);
+}
+.c-input-checkbox--2CzvY input:checked + span .c-input-checkbox-icon--7A-8k {
+  opacity: 1;
+  transform: scale(1);
+}
 
 @-moz-keyframes spin--2YilK {
   from {
@@ -18233,7 +18539,7 @@ body {
 .o-side--tXbXL,
 .o-field-input-action--2k7a8 {
   position: absolute;
-  top: 0;
+  top: 1.5rem;
   left: 0;
   width: 100%;
   max-width: 32rem;
@@ -18245,7 +18551,7 @@ body {
   max-width: 100%;
 }
 .o-field-input-action--2k7a8 {
-  top: -3rem;
+  top: -1.5rem;
   text-transform: uppercase;
 }
 
