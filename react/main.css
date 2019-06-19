@@ -9790,20 +9790,15 @@ body {
 .c-chip--dashedVariant--2LWN4 {
   border: 1px dashed;
 }
-.c-chip--fullTheme--2guiJ {
-  border-color: var(--dodgerBlue);
-  background-color: var(--dodgerBlue);
-  color: var(--white);
-}
 .c-chip--normalTheme--kVm5M {
   border-color: var(--silver);
   background-color: var(--paleGrey);
   color: inherit;
 }
 .c-chip--primaryTheme--1ZNhX {
-  border-color: var(--frenchPass);
-  background-color: var(--zircon);
-  color: var(--dodgerBlue);
+  border-color: var(--dodgerBlue);
+  background-color: var(--dodgerBlue);
+  color: var(--white);
 }
 .c-chip--errorTheme--2hVXe {
   border-color: var(--yourPink);
