@@ -9796,9 +9796,9 @@ body {
   color: inherit;
 }
 .c-chip--primaryTheme--1ZNhX {
-  border-color: var(--dodgerBlue);
-  background-color: var(--dodgerBlue);
-  color: var(--white);
+  border-color: var(--frenchPass);
+  background-color: var(--zircon);
+  color: var(--dodgerBlue);
 }
 .c-chip--errorTheme--2hVXe {
   border-color: var(--yourPink);
@@ -9815,6 +9815,10 @@ body {
 .c-chip--hoverablePrimaryTheme--12PPV:hover,
 .c-chip--hoverablePrimaryTheme--12PPV:focus {
   background-color: var(--frenchPass);
+}
+.c-chip--normalPrimaryTheme--24yFt {
+  background-color: var(--dodgerBlue);
+  color: var(--white);
 }
 .c-chip--hoverableErrorTheme--wospw:hover,
 .c-chip--hoverableErrorTheme--wospw:focus {
