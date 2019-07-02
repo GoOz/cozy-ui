@@ -18237,6 +18237,9 @@ body {
   color: var(--coolGrey);
   fill: currentColor;
 }
+.c-nav-icon--hrJUe svg {
+  display: block;
+}
 .is-active--2D0jN .c-nav-icon--hrJUe {
   color: var(--dodgerBlue);
 }
