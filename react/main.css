@@ -15492,14 +15492,6 @@ body {
   height: 0;
   overflow: hidden;
 }
-.select--inset--qJCHO > div:first-child {
-  border: 0.125rem solid var(--white);
-  background-color: transparent;
-}
-.select--inset--qJCHO > div:first-child:hover {
-  border-color: var(--white);
-  background-color: var(--paleGrey);
-}
 .select--autowidth--16AEp {
   max-width: 30rem;
 }
